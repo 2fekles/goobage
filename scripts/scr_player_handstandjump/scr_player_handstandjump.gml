@@ -52,7 +52,7 @@ function scr_player_handstandjump()
 	    {
 			state = 69
 	        image_index = 0
-	        sprite_index = spr_player_secondjump1
+	        sprite_index = spr_player_longjump
 	        scr_soundeffect(sfx_jump)
 	        instance_create(x, y, obj_highjumpcloud2)
 	        vsp = -11

@@ -323,7 +323,7 @@ if (global.playerhealth == 1 && (!instance_exists(obj_sweat)) && obj_player.stat
 if (angry == 1 && (!instance_exists(obj_angrycloud)) && obj_player.state == 0)
     instance_create(x, y, obj_angrycloud)
 if (global.combotime > 0)
-    global.combotime -= 0.5
+    global.combotime -= 0.15
 if (global.combotime == 0 && global.combo != 0)
     global.combo = 0
 if (input_buffer_jump < 8)

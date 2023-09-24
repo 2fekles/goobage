@@ -163,5 +163,6 @@ global.SAGEknight = ini_read_string("SAGE2019", "knight", 0)
 global.SAGEknighttaken = 0
 global.SAGEtoppin = ini_read_string("SAGE2019", "toppin", 0)
 global.SAGEtreasure = ini_read_string("SAGE2019", "treasure", 0)
+
 ini_close()
 stickpressed = 0

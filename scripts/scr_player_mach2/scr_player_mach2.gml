@@ -13,6 +13,7 @@ function scr_player_mach2()
 	else if place_meeting(x, (y + 1), obj_railh2)
 	    hsp = ((xscale * movespeed) + 5)
 	move2 = (key_right2 + key_left2)
+	
 	move = (key_right + key_left)
 	if (character == "N")
 	{
@@ -73,6 +74,7 @@ function scr_player_mach2()
 	        movespeed += 0.1
 	    if (movespeed >= 12)
 	    {
+			sprite_index != spr_player_rollgetup
 	        movespeed = 12
 	        machhitAnim = 0
 	        state = 89
@@ -108,7 +110,7 @@ function scr_player_mach2()
 	}
 	if (grounded && floor(image_index) == (image_number - 1) && sprite_index == spr_player_rollgetup)
 	    sprite_index = spr_player_mach
-	if ((!grounded) && sprite_index != spr_secondjump2 && sprite_index != spr_mach2jump && sprite_index != spr_player_mach2jump && sprite_index != spr_player_walljumpstart && sprite_index != spr_player_walljumpend)
+	if ((!grounded) && sprite_index != spr_secondjump2 && sprite_index != spr_mach2jump && sprite_index != spr_player_mach2jump && sprite_index != spr_player_walljumpstart && sprite_index != spr_player_walljumpend&& sprite_index != spr_player_longjump)
 	    sprite_index = spr_secondjump1
 	if (floor(image_index) == (image_number - 1) && sprite_index == spr_secondjump1)
 	    sprite_index = spr_secondjump2
@@ -121,15 +123,7 @@ function scr_player_mach2()
 	}
 	if key_taunt2
 	{
-	    scr_soundeffect(sfx_taunt)
-	    taunttimer = 20
-	    tauntstoredmovespeed = movespeed
-	    tauntstoredsprite = sprite_index
-	    tauntstoredstate = state
-	    state = 50
-	    image_index = random_range(0, (sprite_get_number(spr_taunt) - 1))
-	    sprite_index = spr_taunt
-	    instance_create(x, y, obj_taunteffect)
+	    scr_dotaunt()
 	}
 	if (((!key_attack) && move != xscale && grounded) || (character == "S" && move == 0 && grounded))
 	{
@@ -149,6 +143,8 @@ function scr_player_mach2()
 	    state = 0
 	if (sprite_index == spr_player_rollgetup)
 	    image_speed = 0.4
-	else
+	else if sprite_index != spr_player_longjump
 	    image_speed = 0.65
+		else if sprite_index = spr_player_longjump && floor(image_index) == (image_number - 1)
+		image_speed = 0
 }
