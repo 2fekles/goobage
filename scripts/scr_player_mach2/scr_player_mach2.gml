@@ -13,6 +13,7 @@ function scr_player_mach2()
 	else if place_meeting(x, (y + 1), obj_railh2)
 	    hsp = ((xscale * movespeed) + 5)
 	move2 = (key_right2 + key_left2)
+	
 	move = (key_right + key_left)
 	if (character == "N")
 	{
@@ -108,7 +109,7 @@ function scr_player_mach2()
 	}
 	if (grounded && floor(image_index) == (image_number - 1) && sprite_index == spr_player_rollgetup)
 	    sprite_index = spr_player_mach
-	if ((!grounded) && sprite_index != spr_secondjump2 && sprite_index != spr_mach2jump && sprite_index != spr_player_mach2jump && sprite_index != spr_player_walljumpstart && sprite_index != spr_player_walljumpend)
+	if ((!grounded) && sprite_index != spr_secondjump2 && sprite_index != spr_mach2jump && sprite_index != spr_player_mach2jump && sprite_index != spr_player_walljumpstart && sprite_index != spr_player_walljumpend&& sprite_index != spr_player_longjump)
 	    sprite_index = spr_secondjump1
 	if (floor(image_index) == (image_number - 1) && sprite_index == spr_secondjump1)
 	    sprite_index = spr_secondjump2
@@ -141,6 +142,8 @@ function scr_player_mach2()
 	    state = 0
 	if (sprite_index == spr_player_rollgetup)
 	    image_speed = 0.4
-	else
+	else if sprite_index != spr_player_longjump
 	    image_speed = 0.65
+		else if sprite_index = spr_player_longjump && floor(image_index) == (image_number - 1)
+		image_speed = 0
 }

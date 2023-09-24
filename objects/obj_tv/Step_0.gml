@@ -38,6 +38,25 @@ switch sprite_index
             default:
                 sprite_index = idlespr
 		}
+		switch obj_player1.state
+		{
+			case 70:
+			if obj_player1.sprite_index = spr_player_machslideboost3
+			sprite_index = spr_tv_exprmach3
+			break
+			case 89:
+			sprite_index = spr_tv_exprmach3
+			break
+			case 36:
+			if obj_player1.movespeed > 12
+			sprite_index = spr_tv_exprmach3
+			break
+			default:
+			if (sprite_index != idlespr && sprite_index != spr_tv_idleanim1 && sprite_index != spr_tv_idleanim2)
+                    sprite_index = idlespr
+			break
+		}
+		
 if (room == rank_room || room == timesuproom || room == boss_room1 || room == Realtitlescreen)
     alpha = 0
 if (room == entrance_1)
@@ -94,3 +113,54 @@ if (obj_player.y < 200 && obj_player.x > (room_width - 200))
     alpha = 0.5
 else if (!((room == rank_room || room == timesuproom || room == boss_room1 || room == Realtitlescreen)))
     alpha = 1
+	if (global.combotime > 0 && global.combo > 0)
+    visualcombo = global.combo
+combo_posX = Wave(-5, 5, 2, 20)
+if (global.combotime > 0 && global.combo != 0)
+{
+    switch combo_state
+    {
+        case 0:
+            combo_posY += combo_vsp
+            combo_vsp += 0.5
+            if (combo_posY > 24)
+                combo_state++
+            break
+        case 1:
+            combo_posY = lerp(combo_posY, 0, 0.05)
+            if (combo_posY < 1)
+            {
+                combo_posY = 0
+                combo_vsp = 0
+                combo_state++
+            }
+            break
+        case 2:
+            if (global.combotime < 30)
+            {
+                combo_posY += combo_vsp
+                if (combo_vsp < 24)
+                    combo_vsp += 0.5
+                if (combo_posY > 0)
+                {
+                    combo_posY = 0
+                    combo_vsp = -1
+                    if (global.combotime < 15)
+                        combo_vsp = -2
+                }
+            }
+            else
+                combo_posY = Approach(combo_posY, 0, 10)
+            break
+    }
+
+}
+else
+{
+    combo_posY = Approach(combo_posY, -500, 5)
+    combo_vsp = 0
+    combo_state = 0
+}
+combofill_index += 0.35
+if (combofill_index > (sprite_get_number(spr_tv_combobubblefill) - 1))
+    combofill_index = frac(combofill_index)

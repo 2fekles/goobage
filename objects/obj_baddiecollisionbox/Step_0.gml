@@ -232,7 +232,10 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player2) && obj_player2
                 instance_create(other.baddieID.x, other.baddieID.y, obj_baddiegibs)
                 other.baddieID.flash = 1
                 other.baddieID.state = 104
+				if state != 69
                 other.baddieID.hp -= 1
+				else
+				other.baddieID.hp -= 0.1
                 if (other.baddieID.stunned < 100)
                     other.baddieID.stunned = 100
                 instance_create(x, y, obj_bumpeffect)
