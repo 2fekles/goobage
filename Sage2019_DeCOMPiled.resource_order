@@ -1,4 +1,11 @@
 {
   "FolderOrderSettings": [],
-  "ResourceOrderSettings": [],
+  "ResourceOrderSettings": [
+    {"name":"spr_tv_idle","order":1,"path":"sprites/spr_tv_idle/spr_tv_idle.yy",},
+    {"name":"scr_dotaunt","order":1,"path":"scripts/scr_dotaunt/scr_dotaunt.yy",},
+    {"name":"spr_tv_open","order":5,"path":"sprites/spr_tv_open/spr_tv_open.yy",},
+    {"name":"spr_tv_idleanim1","order":2,"path":"sprites/spr_tv_idleanim1/spr_tv_idleanim1.yy",},
+    {"name":"spr_tv_idleanim2","order":3,"path":"sprites/spr_tv_idleanim2/spr_tv_idleanim2.yy",},
+    {"name":"spr_tv_off","order":4,"path":"sprites/spr_tv_off/spr_tv_off.yy",},
+  ],
 }
