@@ -15,6 +15,8 @@ function scr_player_mach3()
 	momemtum = 1
 	move = (key_right + key_left)
 	move2 = (key_right2 + key_left2)
+	if grounded && sprite_index == spr_player_Sjumpcancel
+	sprite_index = spr_mach4
 	if (movespeed < 24 && move == xscale)
 	{
 	    movespeed += 0.04
