@@ -469,3 +469,15 @@ if (state != 7 && state != 77 && state != 62 && state != 3 && state != 60 && sta
     scr_collide_player()
 if (state == 87)
     scr_collide_player()
+	if keyboard_check_pressed(ord("Q")) 
+	{
+		state = 59
+		sprite_index = spr_player_slipbanan1
+        vsp = -11
+        movespeed += 2
+        if (movespeed > 14)
+            movespeed = 14
+        hsp = (movespeed * xscale)
+        image_index = 0
+	}
+	
