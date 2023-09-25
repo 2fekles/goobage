@@ -1,5 +1,6 @@
 function scr_player_Sjump()
 {
+	move = (key_right + key_left)
 	hsp = 0
 	mach2 = 0
 	jumpAnim = 1
@@ -45,15 +46,27 @@ function scr_player_Sjump()
 	    state = 91
 	    machhitAnim = 0
 	}
-	if key_attack2
-	{
-	    movespeed = 12
-	    machhitAnim = 0
-	    state = 89
-	    flash = 1
-	    sprite_index = spr_mach4
-	    instance_create(x, y, obj_jumpdust)
-	}
+	else if (key_slap2 && character == "P" && sprite_index != spr_player_Sjumpcancelstart)
+    {
+        image_index = 0
+        sprite_index = spr_player_Sjumpcancelstart
+    }
+    if (sprite_index == spr_player_Sjumpcancelstart)
+    {
+        vsp = 0
+        if (move != 0)
+            xscale = move
+        if (floor(image_index) == (image_number - 1))
+        {
+            vsp = -5
+            movespeed = 12
+            image_index = 0
+            sprite_index = spr_player_Sjumpcancel
+            state = 89
+            with (instance_create(x, y, obj_crazyruneffect))
+                image_xscale = other.xscale
+        }
+    }
 	image_speed = 0.5
 	scr_collide_player()
 }

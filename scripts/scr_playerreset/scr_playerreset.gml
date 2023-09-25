@@ -10,6 +10,8 @@ function scr_playerreset()
 	global.snickchallenge = 0
 	if instance_exists(obj_snickexe)
 	    instance_destroy(obj_snickexe)
+		scale_xs = 1
+scale_ys = 1
 	with (obj_tv)
 	{
 	    shownranka = 0
