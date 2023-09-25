@@ -1,3 +1,5 @@
+if (hitLag <= 0)
+    {
 scr_getinput()
 switch state
 {
@@ -481,3 +483,11 @@ if (state == 87)
         image_index = 0
 	}
 	
+	}
+	else
+	{
+    x = hitX
+    y = hitY
+    hitLag-- 
+    image_speed = 0
+	}
