@@ -248,10 +248,14 @@ function scr_player_normal()
 	    image_speed = 0.35
 	if (key_slap2 && character == "P" && (!((shotgunAnim == 1 && key_up))))
 	{
+		if (!instance_exists(obj_crazyruneffect))
+	        instance_create(x, y, obj_crazyruneffect)
 	    suplexmove = 1
 	    scr_soundeffect(sfx_suplexdash)
 	    state = 21
 		flash = 1
+		if ((!instance_exists(obj_superdashcloud)) && grounded)
+	    instance_create(x, y, obj_superdashcloud)
 	    image_index = 0
 	    if (shotgunAnim == 0)
 	        sprite_index = spr_player_suplexdash
@@ -286,7 +290,7 @@ function scr_player_normal()
 	    movespeed = 6
 	    sprite_index = spr_mach1
 	    jumpAnim = 1
-	    state = 68
+	    state = 69
 	    image_index = 0
 	}
 	if (character == "S" && move != 0 && (!(place_meeting((x + xscale), y, obj_solid))))
@@ -294,7 +298,7 @@ function scr_player_normal()
 	    movespeed = 6
 	    sprite_index = spr_mach1
 	    jumpAnim = 1
-	    state = 68
+	    state = 69
 	    image_index = 0
 	}
 	if (key_attack && (!(place_meeting((x + xscale), y, obj_solid))) && character == "S" && grounded)

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "sfx_taunt",
+  "name": "sfx_escapecollect",
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.700952,
+  "duration": 0.615374,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
-  "preload": true,
+  "preload": false,
   "sampleRate": 44100,
-  "soundFile": "sfx_taunt",
-  "type": 0,
-  "volume": 0.34,
+  "soundFile": "sfx_escapecollect.ogg",
+  "type": 1,
+  "volume": 1.0,
 }

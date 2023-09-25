@@ -28,7 +28,7 @@ function scr_player_machslide()
 	    state = 71
 	    image_index = 4
 	}
-	if (floor(image_index) == (image_number - 1) && sprite_index == spr_machslideboost)
+	if (floor(image_index) == (image_number - 1) && sprite_index == spr_machslideboost && grounded)
 	{
 	    hsp = 0
 	    image_index = 0
@@ -36,7 +36,7 @@ function scr_player_machslide()
 	    movespeed = 8
 	    state = 69
 	}
-	if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_machslideboost3)
+	if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_machslideboost3 && grounded)
 	{
 	    hsp = 0
 	    sprite_index = spr_player_mach4
