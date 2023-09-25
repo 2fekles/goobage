@@ -30,5 +30,5 @@
     "path": "sprites/spr_slope/spr_slope.yy",
   },
   "spriteMaskId": null,
-  "visible": false,
+  "visible": true,
 }
