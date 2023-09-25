@@ -8,6 +8,16 @@ function scr_player_slipnslide()
     else
         image_speed = 0.35
 
+with instance_place(x,y + 1,obj_metalblock)
+instance_destroy()
+with instance_place(x,y - 1,obj_destructibles)
+instance_destroy()
+with instance_place(x,y + 1,obj_destructibles)
+instance_destroy()
+with instance_place(x + sign(hsp),y,obj_destructibles)
+instance_destroy()
+with instance_place(x - sign(hsp),y,obj_destructibles)
+instance_destroy()
     if (grounded && vsp > -1 && sprite_index != spr_player_slipbanan2 && (!(place_meeting(x, (y + 1), obj_metalblock))) && (!(place_meeting(x, (y + 1), obj_destructibles))))
     {
         if (sprite_index == spr_player_rockethitwall)
@@ -19,7 +29,7 @@ function scr_player_slipnslide()
         else
         {
             vsp = -6
-            movespeed = Approach(movespeed, 0, 3)
+            scr_soundeffect(sfx_bumpwall)
             sprite_index = spr_player_rockethitwall
             instance_create(x, (y + 43), obj_bangeffect)
         }
@@ -31,8 +41,7 @@ function scr_player_slipnslide()
     }
     if (scr_solid((x + xscale), y) && (!scr_slope()) && (scr_solid_slope((x + sign(hsp)), y) || place_meeting((x + sign(hsp)), y, obj_solid)) && (!(place_meeting((x + sign(hsp)), y, obj_destructibles))))
     {
-        if (sprite_index == spr_player_slipbanan1)
-            movespeed = Approach(movespeed, 0, 3)
+        scr_soundeffect(sfx_bumpwall)
         sprite_index = spr_player_rockethitwall
         instance_create((x + 30), y, obj_bangeffect)
         xscale *= -1

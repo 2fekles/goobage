@@ -16,3 +16,4 @@ if place_meeting(x, (y + floor(vsp)), obj_null)
     vsp = 0
 }
 y += floor(vsp)
+image_angle += image_xscale

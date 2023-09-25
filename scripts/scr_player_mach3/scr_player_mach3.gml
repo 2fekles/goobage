@@ -155,4 +155,20 @@ function scr_player_mach3()
 	{
 	    scr_dotaunt()
 	}
+	if (key_slap2 && character == "P" && suplexmove == 0 && (!((shotgunAnim == 1 && key_up))))
+	{
+	    if (!instance_exists(obj_crazyruneffect))
+	        instance_create(x, y, obj_crazyruneffect)
+	    suplexmove = 1
+	    scr_soundeffect(sfx_suplexdash)
+	    state = 21
+		flash = 1
+		if ((!instance_exists(obj_superdashcloud)) && grounded)
+	    instance_create(x, y, obj_superdashcloud)
+	    image_index = 0
+	    
+	        sprite_index = !grounded ? spr_player_suplexgrabjumpstart : spr_player_suplexdash
+	    if movespeed < 6
+	    movespeed = 6
+	}
 }
