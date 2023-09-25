@@ -74,7 +74,7 @@ function scr_player_mach2()
 	        movespeed += 0.1
 	    if (movespeed >= 12)
 	    {
-			sprite_index != spr_player_rollgetup
+			if sprite_index != spr_player_rollgetup
 	        movespeed = 12
 	        machhitAnim = 0
 	        state = 89
