@@ -47,8 +47,8 @@ if (shake_mag > 0)
 if (instance_exists(obj_player1) && obj_player1.state != 35 && obj_player1.state != 54)
 {
     var target = obj_player1
-	cx = lerp(cx,target.x,0.15)
-cy = lerp(cy,target.y,0.15)
+	cx = target.x
+cy = target.y
     if (obj_player1.state == 89 || obj_player1.state == 36)
     {
         if (chargecamera > (obj_player1.xscale * 100))

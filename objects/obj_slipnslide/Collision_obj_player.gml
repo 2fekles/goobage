@@ -4,6 +4,13 @@ if (drop == 0)
     {
         other.drop = 1
         state = 59
-        movespeed = 12
+		sprite_index = spr_player_slipbanan1
+        
+        vsp = -11
+        movespeed += 2
+        if (movespeed > 14)
+            movespeed = 14
+        hsp = (movespeed * xscale)
+        image_index = 0
     }
 }
