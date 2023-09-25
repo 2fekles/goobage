@@ -30,5 +30,5 @@
     "path": "sprites/spr_baddie/spr_baddie.yy",
   },
   "spriteMaskId": null,
-  "visible": false,
+  "visible": true,
 }
