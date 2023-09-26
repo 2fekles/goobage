@@ -7,6 +7,7 @@
     {"name":"spr_secretportal_spawnclose","order":23,"path":"sprites/spr_secretportal_spawnclose/spr_secretportal_spawnclose.yy",},
     {"name":"spr_secretportal_spawnopen","order":21,"path":"sprites/spr_secretportal_spawnopen/spr_secretportal_spawnopen.yy",},
     {"name":"obj_secretportal","order":2,"path":"objects/obj_secretportal/obj_secretportal.yy",},
+    {"name":"spr_jamjamjar","order":1,"path":"sprites/spr_jamjamjar/spr_jamjamjar.yy",},
     {"name":"spr_tv_whitenoise","order":7,"path":"sprites/spr_tv_whitenoise/spr_tv_whitenoise.yy",},
     {"name":"spr_tv_idle","order":1,"path":"sprites/spr_tv_idle/spr_tv_idle.yy",},
     {"name":"spr_player_Sjumpcancel","order":28,"path":"sprites/spr_player_Sjumpcancel/spr_player_Sjumpcancel.yy",},
