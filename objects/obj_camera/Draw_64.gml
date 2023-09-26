@@ -1,7 +1,25 @@
 var hud_xx = (149 + irandom_range((-collect_shake), collect_shake))
     var hud_yy = ((105 + irandom_range((-collect_shake), collect_shake)) + hud_posY)
-	pizzascore_index += 0.25
+pizzascore_index += (0 + (0.25 * global.stylethreshold))
+    if (pizzascore_index > (pizzascore_number - 1))
+        pizzascore_index = (0 + frac(pizzascore_index))
+    if (global.stylethreshold <= 0)
+    {
+        if (floor(pizzascore_index) != 0)
+            pizzascore_index += 0.35
+        else
+            pizzascore_index = 0
+    }
     var _numfont = font_add_sprite_ext(spr_font_collect, "0123456789", 1, 0)
+	var sw = sprite_get_width(spr_heatmeter_fill)
+    var sh = sprite_get_height(spr_heatmeter_fill)
+    var b = global.stylemultiplier
+    
+    draw_sprite_part(spr_heatmeter_fill, pizzascore_index, 0, 0, (sw * b), sh, (hud_xx - 95), (hud_yy + 24))
+    shader_set(global.Pal_Shader)
+    pal_swap_set(spr_heatmeter_palette, global.stylethreshold, 0)
+    draw_sprite_ext(spr_heatmeter, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
+    shader_reset()
     draw_sprite_ext(spr_pizzascore, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
     var _score = global.collect
     
@@ -131,9 +149,7 @@ var rank_ix = 0
 
     var t = (spr_h * perc)
     var top = (spr_h - t)
-    draw_sprite_part(spr_ranks_hudfill, rank_ix, 0, top, spr_w, (spr_h - top), (rx - spr_xo), ((ry - spr_yo) + top))
     draw_sprite_ext(spr_ranks_hud, rank_ix, rx, ry, rank_scale, rank_scale, 0, c_white, 1)
-    draw_set_valign(fa_top)
-    draw_set_halign(fa_left)
-    draw_set_font(global.collectfont)
+	draw_sprite_part(spr_ranks_hudfill, rank_ix, 0, top, spr_w, (spr_h - top), (rx - spr_xo), ((ry - spr_yo) + top))
+    
 draw_set_blend_mode(bm_normal)
