@@ -31,7 +31,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.6.0.92",
+    "IDEVersion": "2023.8.1.102",
   },
   "resources": [
     {"id":{"name":"obj_slope","path":"objects/obj_slope/obj_slope.yy",},},
@@ -2339,6 +2339,7 @@
     {"roomId":{"name":"floor2_roomportal","path":"rooms/floor2_roomportal/floor2_roomportal.yy",},},
     {"roomId":{"name":"floor2_roomtreasure","path":"rooms/floor2_roomtreasure/floor2_roomtreasure.yy",},},
   ],
+  "templateType": null,
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"png","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"targets":-1,},
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"texture_baddies","autocrop":true,"border":2,"compressFormat":"png","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
