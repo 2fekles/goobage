@@ -1,3 +1,9 @@
+switch state
+{
+	case (0 << 0):
+	idlespr = spr_tv_idle
+	if obj_player1.state = 89
+			tv_do_expression(spr_tv_exprmach3)
 switch sprite_index
         {
             case spr_tv_off:
@@ -9,7 +15,10 @@ switch sprite_index
                 break
             case spr_tv_open:
                 if (floor(image_index) == (image_number - 1))
+				{
+					
                     sprite_index = idlespr
+				}
                 break
             case spr_tv_idle:
             
@@ -35,28 +44,47 @@ switch sprite_index
                 if (idlespr != spr_tv_idle)
                     sprite_index = idlespr
                 break
-            default:
-                sprite_index = idlespr
-		}
-		switch obj_player1.state
-		{
-			case 70:
-			if obj_player1.sprite_index = spr_player_machslideboost3
-			sprite_index = spr_tv_exprmach3
-			break
-			case 89:
-			sprite_index = spr_tv_exprmach3
-			break
-			case 36:
-			if obj_player1.movespeed > 12
-			sprite_index = spr_tv_exprmach3
-			break
-			default:
-			if (sprite_index != idlespr && sprite_index != spr_tv_idleanim1 && sprite_index != spr_tv_idleanim2)
-                    sprite_index = idlespr
-			break
+            
 		}
 		
+		break
+			case (250 << 0):
+            sprite_index = spr_tv_whitenoise
+            if (noisebuffer > 0)
+                noisebuffer--
+            else
+            {
+                noisebuffer = noisemax
+                if (expressionsprite != -4)
+                {
+                    state = (251 << 0)
+                    sprite_index = expressionsprite
+                }
+                else
+				{
+                    state = (0 << 0)
+					sprite_index = spr_tv_idle
+                image_index = 0
+				}
+            }
+			break
+			case (251 << 0):
+			
+				switch expressionsprite
+            {
+			case spr_tv_exprmach3:
+                    
+                        if obj_player1.state != 89 || (obj_player1.state = 70 && sprite_index != spr_player_machslideboost3)
+                        {
+                            state = (250 << 0)
+                            expressionsprite = -4
+                        }
+                    
+                    break
+			}
+			break
+			
+		}
 if (room == rank_room || room == timesuproom || room == boss_room1 || room == Realtitlescreen)
     alpha = 0
 if (room == entrance_1)

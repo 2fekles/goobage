@@ -184,6 +184,8 @@ function scr_player_jump()
 	}
 	if (key_slap2 && character == "P" && suplexmove == 0 && (!((shotgunAnim == 1 && key_up))))
 	{
+		if !instance_exists(obj_crazyrunothereffect)
+	    instance_create(x, y, obj_crazyrunothereffect)
 	    if (!instance_exists(obj_crazyruneffect))
 	        instance_create(x, y, obj_crazyruneffect)
 	    suplexmove = 1

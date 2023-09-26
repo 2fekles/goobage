@@ -86,7 +86,7 @@ function scr_player_mach2()
 	}
 	if key_jump
 	    input_buffer_jump = 0
-	if (key_down && (!(place_meeting(x, y, obj_dashpad))))
+	if (key_down && sprite_index != spr_player_mach1 && (!(place_meeting(x, y, obj_dashpad))))
 	{
 	    instance_create(x, y, obj_jumpdust)
 	    flash = 0
@@ -151,6 +151,8 @@ function scr_player_mach2()
 		image_speed = 0
 		if (key_slap2 && character == "P" && suplexmove == 0 && (!((shotgunAnim == 1 && key_up))))
 	{
+		if !instance_exists(obj_crazyrunothereffect)
+	    instance_create(x, y, obj_crazyrunothereffect)
 	    if (!instance_exists(obj_crazyruneffect))
 	        instance_create(x, y, obj_crazyruneffect)
 	    suplexmove = 1
