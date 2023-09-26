@@ -106,7 +106,7 @@ angry = 0
 baddiegrabbedID = 0
 character = "P"
 scr_characterspr()
-paletteselect = 2
+paletteselect =1
 global.panic = 0
 global.snickchallenge = 0
 colorchange = 0
