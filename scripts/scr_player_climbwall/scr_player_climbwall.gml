@@ -9,7 +9,7 @@ function scr_player_climbwall()
 	    wallspeed += 0.05
 	crouchslideAnim = 1
 	sprite_index = spr_machclimbwall
-	if (((!key_attack) && character == "P") || (move != xscale && move != 0) || (move != xscale && character == "S"))
+	if !key_attack && character == "P"
 	{
 	    state = 0
 	    movespeed = 0
