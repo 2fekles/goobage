@@ -1,3 +1,5 @@
+if hitLag < 0
+{
 switch state
 {
     case 92:
@@ -52,3 +54,12 @@ if (state != 104)
     thrown = 0
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = (0.15 * room_speed)
+}
+else
+	{
+		hitLag--
+		x = hitX
+		y = hitY
+		image_speed = 0
+		
+	}

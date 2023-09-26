@@ -31,7 +31,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.2.1.75",
+    "IDEVersion": "2023.6.0.92",
   },
   "resources": [
     {"id":{"name":"obj_slope","path":"objects/obj_slope/obj_slope.yy",},},
@@ -1490,6 +1490,7 @@
     {"id":{"name":"spr_playerN_keyget","path":"sprites/spr_playerN_keyget/spr_playerN_keyget.yy",},},
     {"id":{"name":"spr_playerN_idlegun","path":"sprites/spr_playerN_idlegun/spr_playerN_idlegun.yy",},},
     {"id":{"name":"spr_playerN_idlesmoke","path":"sprites/spr_playerN_idlesmoke/spr_playerN_idlesmoke.yy",},},
+    {"id":{"name":"spr_player_jumpdive2","path":"sprites/spr_player_jumpdive2/spr_player_jumpdive2.yy",},},
     {"id":{"name":"spr_playerN_idleface","path":"sprites/spr_playerN_idleface/spr_playerN_idleface.yy",},},
     {"id":{"name":"spr_washingmachine","path":"sprites/spr_washingmachine/spr_washingmachine.yy",},},
     {"id":{"name":"spr_playerN_glide","path":"sprites/spr_playerN_glide/spr_playerN_glide.yy",},},
@@ -2002,6 +2003,7 @@
     {"id":{"name":"bg_dungeondark1","path":"sprites/bg_dungeondark1/bg_dungeondark1.yy",},},
     {"id":{"name":"bg_dungeondark2","path":"sprites/bg_dungeondark2/bg_dungeondark2.yy",},},
     {"id":{"name":"bg_dungeontomato","path":"sprites/bg_dungeontomato/bg_dungeontomato.yy",},},
+    {"id":{"name":"spr_player_jumpdive1","path":"sprites/spr_player_jumpdive1/spr_player_jumpdive1.yy",},},
     {"id":{"name":"bg_dungeontomato2","path":"sprites/bg_dungeontomato2/bg_dungeontomato2.yy",},},
     {"id":{"name":"bg_dungeonskeleton1","path":"sprites/bg_dungeonskeleton1/bg_dungeonskeleton1.yy",},},
     {"id":{"name":"bg_dungeonskeleton2","path":"sprites/bg_dungeonskeleton2/bg_dungeonskeleton2.yy",},},

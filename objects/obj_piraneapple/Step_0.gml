@@ -1,3 +1,5 @@
+if hitLag < 0
+{
 if (turning == 0)
     hsp = (image_xscale * movespeed)
 else
@@ -45,3 +47,12 @@ if place_meeting(x, (y + floor(vsp)), obj_null)
     vsp = 0
 }
 y += floor(vsp)
+}
+else
+	{
+		hitLag--
+		x = hitX
+		y = hitY
+		image_speed = 0
+		
+	}

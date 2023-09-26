@@ -10,3 +10,4 @@ blue = 0
 spr_palette = 0
 paletteselect = 0
 spd = 0.05
+full = 0

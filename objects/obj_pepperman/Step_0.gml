@@ -1,3 +1,5 @@
+if hitLag < 0
+{
 if (sprite_index == spr_pepperman_charge)
     x += (spd - 0.5)
 if (sprite_index == spr_pepperman_charge && obj_player.movespeed > 5)
@@ -28,3 +30,12 @@ if (dead == 1)
     x += hsp
     y += floor(vsp)
 }
+}
+else
+	{
+		hitLag--
+		x = hitX
+		y = hitY
+		image_speed = 0
+		
+	}

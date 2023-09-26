@@ -1,6 +1,6 @@
 function scr_player_finishingblow()
 {
-	hsp = movespeed
+	hsp = xscale * movespeed
 	
 		if afterima > 0
 		afterima--
@@ -9,14 +9,15 @@ function scr_player_finishingblow()
 			afterima = 3
 			with (instance_create(x, y, obj_mach3effect))
             {
-                
+                blue = 1
+				full = 1
                 spd = 0.05
                 image_blend = make_color_rgb(44, 126, 228)
                 image_alpha = 1.25
                 spr_palette = other.spr_palette
                 paletteselect = other.paletteselect
-				blue = 1
-				blue = 1
+				
+				
             }
 		}
 	if (floor(image_index) == (image_number - 1))

@@ -6,6 +6,8 @@ if instance_exists(baddieID)
     y = baddieID.y
     image_xscale = baddieID.image_xscale
 }
+if baddieID.hitLag < 0
+{
 if (instance_exists(baddieID) && place_meeting(x, y, obj_player1) && obj_player1.cutscene == 0 && obj_player1.state != 6)
 {
     if (baddieID.state != 107)
@@ -24,9 +26,15 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player1) && obj_player1
                     machpunchAnim = 1
                     image_index = 0
                 }
-				hitLag = 12 / 2
+				hitLag = 5
 				hitX = x
 				hitY = y
+				with other.baddieID
+				{
+				hitLag = 5
+				hitX = x
+				hitY = y
+				}
                 scr_soundeffect(sfx_punch)
                 instance_destroy(other.baddieID)
                 instance_destroy(other.id)
@@ -39,6 +47,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player1) && obj_player1
                     suplexmove = 0
                     vsp = -11
                 }
+				
             }
             if (instance_exists(other.baddieID) && y < other.baddieID.y && attacking == 0 && sprite_index != spr_player_mach2jump && (state == 57 || state == 68 || state == 45) && vsp > 0 && other.baddieID.vsp >= 0 && sprite_index != spr_stompprep)
             {
@@ -267,4 +276,5 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player2) && obj_player2
             }
         }
     }
+}
 }

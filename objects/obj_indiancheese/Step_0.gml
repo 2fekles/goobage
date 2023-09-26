@@ -1,4 +1,6 @@
-switch state
+if hitLag < 0
+{
+	switch state
 {
     case 92:
         scr_enemy_idle()
@@ -59,3 +61,12 @@ if (boundbox == 0)
         other.boundbox = 1
     }
 }
+}
+else
+	{
+		hitLag--
+		x = hitX
+		y = hitY
+		image_speed = 0
+		
+	}
