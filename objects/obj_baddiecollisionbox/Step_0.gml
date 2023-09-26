@@ -6,10 +6,12 @@ if instance_exists(baddieID)
     y = baddieID.y
     image_xscale = baddieID.image_xscale
 }
-if baddieID.hitLag < 0
-{
+
 if (instance_exists(baddieID) && place_meeting(x, y, obj_player1) && obj_player1.cutscene == 0 && obj_player1.state != 6)
 {
+	if baddieID.hitLag < 0
+{
+
     if (baddieID.state != 107)
     {
         with (obj_player1)
@@ -146,6 +148,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player1) && obj_player1
         }
     }
 }
+}
 if (instance_exists(baddieID) && place_meeting(x, y, obj_player2) && obj_player2.cutscene == 0 && obj_player2.state != 6)
 {
     if (baddieID.state != 107)
@@ -276,5 +279,4 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player2) && obj_player2
             }
         }
     }
-}
 }
