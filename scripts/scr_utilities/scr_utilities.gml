@@ -167,3 +167,28 @@ function scr_player_addslopemomentum(argument0, argument1) //gml_Script_scr_play
             other.movespeed -= argument1
     }
 }
+function scr_heatup() 
+{
+    global.baddiespeed += 1
+    if (global.stylethreshold == 2)
+        global.baddiepowerup = 1
+    if (global.stylethreshold >= 2)
+    {
+        global.baddierage = 1
+        
+    }
+    
+}
+function scr_heatdown() //gml_Script_scr_heatdown
+{
+    global.baddiespeed -= 1
+    if (global.stylethreshold != 2)
+        global.baddiepowerup = 0
+    if (global.stylethreshold < 2)
+    {
+        global.baddierage = 0
+        
+    }
+    
+    
+}

@@ -1,5 +1,18 @@
 scr_initinput()
+if (!variable_global_exists("saveroom"))
+{
 global.saveroom = ds_list_create()
+global.escaperoom = ds_list_create()
+    global.lap = 0
+    global.laps = 0
+	global.style = 0
+global.stylethreshold = 0
+global.stylemultiplier = 0
+global.heattime = 1
+global.baddiespeed = 1
+global.baddiepowerup = 0
+global.baddierage = 0
+}
 grav = 0.5
 hsp = 0
 vsp = 0

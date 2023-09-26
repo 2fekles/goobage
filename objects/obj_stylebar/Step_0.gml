@@ -15,3 +15,4 @@ if (global.style < 0 && global.stylethreshold == 0)
 if (global.stylethreshold == 4 && global.style > 55)
     global.style = 55
 alpha = obj_tv.alpha
+global.stylemultiplier = ((global.style + (global.stylethreshold * 55)) / 220)
