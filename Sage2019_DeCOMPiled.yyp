@@ -31,7 +31,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.6.0.92",
+    "IDEVersion": "2023.2.1.75",
   },
   "resources": [
     {"id":{"name":"obj_slope","path":"objects/obj_slope/obj_slope.yy",},},
@@ -335,6 +335,7 @@
     {"id":{"name":"obj_stompeffect","path":"objects/obj_stompeffect/obj_stompeffect.yy",},},
     {"id":{"name":"obj_jumpdust","path":"objects/obj_jumpdust/obj_jumpdust.yy",},},
     {"id":{"name":"obj_superdashcloud","path":"objects/obj_superdashcloud/obj_superdashcloud.yy",},},
+    {"id":{"name":"spr_jamjamjar","path":"sprites/spr_jamjamjar/spr_jamjamjar.yy",},},
     {"id":{"name":"obj_highjumpcloud1","path":"objects/obj_highjumpcloud1/obj_highjumpcloud1.yy",},},
     {"id":{"name":"obj_highjumpcloud2","path":"objects/obj_highjumpcloud2/obj_highjumpcloud2.yy",},},
     {"id":{"name":"obj_grindeffect","path":"objects/obj_grindeffect/obj_grindeffect.yy",},},
