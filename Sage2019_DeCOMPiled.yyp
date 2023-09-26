@@ -2088,6 +2088,7 @@
     {"id":{"name":"tilespr_tile_bigrocks_tileset","path":"sprites/tilespr_tile_bigrocks_tileset/tilespr_tile_bigrocks_tileset.yy",},},
     {"id":{"name":"tile_bigrocks_tileset","path":"tilesets/tile_bigrocks_tileset/tile_bigrocks_tileset.yy",},},
     {"id":{"name":"tilespr_tile_desert_tileset","path":"sprites/tilespr_tile_desert_tileset/tilespr_tile_desert_tileset.yy",},},
+    {"id":{"name":"obj_audioconfig","path":"objects/obj_audioconfig/obj_audioconfig.yy",},},
     {"id":{"name":"tile_desert_tileset","path":"tilesets/tile_desert_tileset/tile_desert_tileset.yy",},},
     {"id":{"name":"tilespr_tile_cavern_tileset","path":"sprites/tilespr_tile_cavern_tileset/tilespr_tile_cavern_tileset.yy",},},
     {"id":{"name":"tile_cavern_tileset","path":"tilesets/tile_cavern_tileset/tile_cavern_tileset.yy",},},

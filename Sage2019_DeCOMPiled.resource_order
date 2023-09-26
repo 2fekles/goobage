@@ -42,6 +42,7 @@
     {"name":"spr_player_jumpdive1","order":30,"path":"sprites/spr_player_jumpdive1/spr_player_jumpdive1.yy",},
     {"name":"spr_pizzascore_pepper","order":13,"path":"sprites/spr_pizzascore_pepper/spr_pizzascore_pepper.yy",},
     {"name":"spr_heatmeter_fill","order":35,"path":"sprites/spr_heatmeter_fill/spr_heatmeter_fill.yy",},
+    {"name":"obj_audioconfig","order":4,"path":"objects/obj_audioconfig/obj_audioconfig.yy",},
     {"name":"spr_player_rockethitwall","order":25,"path":"sprites/spr_player_rockethitwall/spr_player_rockethitwall.yy",},
   ],
 }

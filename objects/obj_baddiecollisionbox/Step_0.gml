@@ -47,6 +47,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player1) && obj_player1
                 if ((!grounded) && state != 73 && key_jump2)
                 {
                     if (state == 69 || state == 89)
+					if sprite_index != spr_player_longjump
                         sprite_index = spr_mach2jump
                     suplexmove = 0
                     vsp = -11

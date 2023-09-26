@@ -250,6 +250,8 @@ function scr_player_normal()
 	{
 		if (!instance_exists(obj_crazyruneffect))
 	        instance_create(x, y, obj_crazyruneffect)
+			if !instance_exists(obj_crazyrunothereffect)
+	    instance_create(x, y, obj_crazyrunothereffect)
 	    suplexmove = 1
 	    scr_soundeffect(sfx_suplexdash)
 	    state = 21
