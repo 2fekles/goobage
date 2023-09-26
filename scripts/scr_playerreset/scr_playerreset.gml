@@ -33,6 +33,8 @@ global.baddiepowerup = 0
 global.baddierage = 0
 	obj_music.fadeoff = 0
 	audio_stop_all()
+	with obj_music
+	event_perform(ev_other, 4)
 	if instance_exists(obj_timesup)
 	    instance_destroy(obj_timesup)
 	global.seconds = 59
