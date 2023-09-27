@@ -1,3 +1,5 @@
+if hitLag < 0
+{
 switch state
 {
     case 92:
@@ -28,6 +30,15 @@ switch state
         scr_enemy_grabbed()
         break
 }
+}
+else
+	{
+		hitLag--
+		x = hitX
+		y = hitY
+		image_speed = 0
+		
+	}
 
 if (state == 104 && stunned > 40 && birdcreated == 0)
 {

@@ -1,3 +1,5 @@
+if obj_player1.hitLag <= 0
+{
 with (obj_player)
 {
     if (place_meeting((x + hsp), y, other.id) && state == 21 && other.hp != 0)
@@ -13,6 +15,9 @@ with (obj_player)
         scr_soundeffect(sfx_hitenemy)
         other.sprite_index = spr_hungrypillar_angry
         other.hp -= 1
+		hitLag = 12
+				hitX = x
+				hitY = y
         movespeed = 3
         image_index = 0
         state = 56
@@ -31,3 +36,5 @@ with (obj_player)
 }
 if place_meeting(x, y, obj_swordhitbox)
     instance_destroy()
+}
+

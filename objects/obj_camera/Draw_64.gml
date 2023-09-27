@@ -1,7 +1,25 @@
 var hud_xx = (149 + irandom_range((-collect_shake), collect_shake))
     var hud_yy = ((105 + irandom_range((-collect_shake), collect_shake)) + hud_posY)
-	pizzascore_index += 0.25
+pizzascore_index += (0 + (0.25 * global.stylethreshold))
+    if (pizzascore_index > (pizzascore_number - 1))
+        pizzascore_index = (0 + frac(pizzascore_index))
+    if (global.stylethreshold <= 0)
+    {
+        if (floor(pizzascore_index) != 0)
+            pizzascore_index += 0.35
+        else
+            pizzascore_index = 0
+    }
     var _numfont = font_add_sprite_ext(spr_font_collect, "0123456789", 1, 0)
+	var sw = sprite_get_width(spr_heatmeter_fill)
+    var sh = sprite_get_height(spr_heatmeter_fill)
+    var b = global.stylemultiplier
+    
+    draw_sprite_part(spr_heatmeter_fill, pizzascore_index, 0, 0, (sw * b), sh, (hud_xx - 95), (hud_yy + 24))
+    shader_set(global.Pal_Shader)
+    pal_swap_set(spr_heatmeter_palette, global.stylethreshold, 0)
+    draw_sprite_ext(spr_heatmeter, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
+    shader_reset()
     draw_sprite_ext(spr_pizzascore, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
     var _score = global.collect
     
@@ -89,5 +107,49 @@ var hud_xx = (149 + irandom_range((-collect_shake), collect_shake))
     if (global.key_inv == 1)
         draw_sprite_ext(spr_key, -1, 50, 30, 1, 1, 1, c_white, alpha)
     draw_sprite_ext(spr_inv, -1, 50, 30, 1, 1, 1, c_white, alpha)
+	var rx = (hud_xx + 142)
+    var ry = (hud_yy - 22)
+var rank_ix = 0
+    if (_score >= global.srank)
+        rank_ix = 4
+    else if (_score >= global.arank)
+        rank_ix = 3
+    else if (_score >= global.brank)
+        rank_ix = 2
+    else if (_score >= global.crank)
+        rank_ix = 1
+    if (previousrank != rank_ix)
+    {
+        previousrank = rank_ix
+        rank_scale = 3
+    }
+    rank_scale = Approach(rank_scale, 1, 0.2)
+    var spr_w = sprite_get_width(spr_ranks_hudfill)
+    var spr_h = sprite_get_height(spr_ranks_hudfill)
+    var spr_xo = sprite_get_xoffset(spr_ranks_hudfill)
+    var spr_yo = sprite_get_yoffset(spr_ranks_hudfill)
+    var perc = 0
+    switch rank_ix
+    {
+        case 4:
+            perc = 1
+            break
+        case 3:
+            perc = ((_score - global.arank) / (global.srank - global.arank))
+            break
+        case 2:
+            perc = ((_score - global.brank) / (global.arank - global.brank))
+            break
+        case 1:
+            perc = ((_score - global.crank) / (global.brank - global.crank))
+            break
+        default:
+            perc = (_score / global.crank)
+    }
 
+    var t = (spr_h * perc)
+    var top = (spr_h - t)
+    draw_sprite_ext(spr_ranks_hud, rank_ix, rx, ry, rank_scale, rank_scale, 0, c_white, 1)
+	draw_sprite_part(spr_ranks_hudfill, rank_ix, 0, top, spr_w, (spr_h - top), (rx - spr_xo), ((ry - spr_yo) + top))
+    
 draw_set_blend_mode(bm_normal)

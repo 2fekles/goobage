@@ -19,8 +19,22 @@ scale_ys = 1
 	    shownrankc = 0
 	}
 	global.SAGEshotgunsnicknumber = 0
+	with (obj_music)
+    {
+        secret = 0
+        music = -4
+        secretmusic = -4
+    }
+	global.stylethreshold = 0
+global.stylemultiplier = 0
+global.heattime = 1
+global.baddiespeed = 1
+global.baddiepowerup = 0
+global.baddierage = 0
 	obj_music.fadeoff = 0
 	audio_stop_all()
+	with obj_music
+	event_perform(ev_other, 4)
 	if instance_exists(obj_timesup)
 	    instance_destroy(obj_timesup)
 	global.seconds = 59
@@ -28,7 +42,8 @@ scale_ys = 1
 	obj_player.state = 0
 	obj_player.visible = true
 	ds_list_clear(global.saveroom)
-	ds_list_clear(global.baddieroom)
+	ds_list_clear(global.escaperoom)
+        ds_list_clear(global.baddieroom)
 	with (obj_player1)
 	{
 	    alarm[0] = -1

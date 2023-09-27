@@ -166,8 +166,7 @@ function scr_player_grab()
 	    else if key_up
 	        sprite_index = spr_player_uppercutfinishingblow
 	    image_index = 0
-	    hsp = 0
-	    movespeed = 0
+	    
 	}
 	if (key_down && (!grounded))
 	{

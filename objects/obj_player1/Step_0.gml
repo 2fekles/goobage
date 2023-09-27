@@ -1,6 +1,11 @@
+if (hitLag <= 0)
+    {
 scr_getinput()
 switch state
 {
+	case -1:
+	scr_player_knightpepbump()
+	break
     case 0:
         scr_player_normal()
         break
@@ -307,6 +312,25 @@ if (character == "P")
         anger -= 1
     }
 }
+if y > (room_height + 300) || y < -800
+{
+    x = roomstartx
+    y = roomstarty
+    visible = true
+    with (obj_camera)
+    {
+        shake_mag = 3
+        shake_mag_acc = (3 / room_speed)
+    }
+    
+    state = 0
+    
+    hsp = 0
+    vsp = 0
+    scr_soundeffect(sfx_groundpound)
+    
+    vsp = 10
+}
 if (sprite_index == spr_player_winding && state != 0)
     windingAnim = 0
 if (state != 45)
@@ -324,6 +348,10 @@ if (angry == 1 && (!instance_exists(obj_angrycloud)) && obj_player.state == 0)
     instance_create(x, y, obj_angrycloud)
 if (global.combotime > 0)
     global.combotime -= 0.15
+	if (global.heattime > 0)
+        global.heattime -= 0.15
+	if (global.heattime <= 0 && global.style > -1)
+        global.style -= 0.05
 if (global.combotime == 0 && global.combo != 0)
     global.combo = 0
 if (input_buffer_jump < 8)
@@ -469,15 +497,33 @@ if (state != 7 && state != 77 && state != 62 && state != 3 && state != 60 && sta
     scr_collide_player()
 if (state == 87)
     scr_collide_player()
-	if keyboard_check_pressed(ord("Q")) 
-	{
-		state = 59
-		sprite_index = spr_player_slipbanan1
-        vsp = -11
-        movespeed += 2
-        if (movespeed > 14)
-            movespeed = 14
-        hsp = (movespeed * xscale)
-        image_index = 0
-	}
 	
+if (global.style > 55 && global.stylethreshold < 3)
+{
+    global.stylethreshold += 1
+    global.style = (global.style - 55)
+    
+    scr_heatup()
+}
+if (global.style < 0 && global.stylethreshold != 0)
+{
+    global.stylethreshold -= 1
+    global.style = (global.style + 55)
+    
+    scr_heatdown()
+}
+
+if (global.style < 0 && global.stylethreshold == 0)
+    global.style = 0
+if (global.stylethreshold == 3 && global.style > 55)
+    global.style = 55
+
+global.stylemultiplier = ((global.style + (global.stylethreshold * 55)) / 220)
+	}
+	else
+	{
+    x = hitX
+    y = hitY
+    hitLag-- 
+    image_speed = 0
+	}

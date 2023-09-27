@@ -184,12 +184,20 @@ function scr_player_jump()
 	}
 	if (key_slap2 && character == "P" && suplexmove == 0 && (!((shotgunAnim == 1 && key_up))))
 	{
+		if !instance_exists(obj_crazyrunothereffect)
+	    instance_create(x, y, obj_crazyrunothereffect)
+	    if (!instance_exists(obj_crazyruneffect))
+	        instance_create(x, y, obj_crazyruneffect)
 	    suplexmove = 1
 	    scr_soundeffect(sfx_suplexdash)
 	    state = 21
 		flash = 1
+		if ((!instance_exists(obj_superdashcloud)) && grounded)
+	    instance_create(x, y, obj_superdashcloud)
 	    image_index = 0
-	    sprite_index = spr_player_suplexgrabjumpstart
+	    
+	        sprite_index = spr_player_suplexgrabjumpstart
+	    
 	    movespeed = 6
 	}
 	if (key_slap2 && character == "P" && shotgunAnim == 1 && key_up)
@@ -213,7 +221,7 @@ function scr_player_jump()
 	    movespeed = 6
 	    sprite_index = spr_mach1
 	    jumpAnim = 1
-	    state = 68
+	    state = 69
 	    image_index = 0
 	}
 	if key_taunt2

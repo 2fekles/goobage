@@ -38,8 +38,10 @@ function scr_player_handstandjump()
 	        sprite_index = spr_crouchslip
 	        if (character == "P")
 	            machhitAnim = 0
-	        state = 67
-	        movespeed = 15
+	        state = 36
+	    vsp = 10
+		if movespeed < 14
+	        movespeed = 13
 	    }
 	    if ((!grounded) && (sprite_index == spr_player_suplexdash || sprite_index == spr_shotgun_suplexdash))
 	    {

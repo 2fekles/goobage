@@ -11,6 +11,7 @@ if (ds_list_find_index(global.baddieroom, id) == -1 && important == 0)
     instance_create(x, y, obj_baddiegibs)
     instance_create(x, y, obj_baddiegibs)
     instance_create(x, y, obj_baddiegibs)
+	scr_sleep(25)
     with (obj_camera)
     {
         shake_mag = 3

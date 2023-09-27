@@ -34,14 +34,15 @@ function scr_player_freefallprep()
 	    if (move != 0)
 	        xscale = move
 	}
-	image_speed = 0.5
-	if (floor(image_index) == (image_number - 1))
-	{
-	    vsp += 14
-	    state = 73
-	    if (shotgunAnim == 0)
-	        sprite_index = spr_bodyslamfall
-	    else
-	        sprite_index = spr_player_shotgunjump3
-	}
+	
+	
+    state = 73
+    image_speed = 0.5
+    if (floor(image_index) == (image_number - 1))
+    {
+        if (shotgunAnim == 0)
+            sprite_index = spr_bodyslamfall
+        else
+            sprite_index = spr_player_shotgunjump3
+    }
 }

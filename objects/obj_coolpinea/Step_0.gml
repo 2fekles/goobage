@@ -1,3 +1,5 @@
+if hitLag < 0
+{
 switch state
 {
     case 92:
@@ -45,3 +47,12 @@ if (state != 107)
     depth = 0
 if (state != 104)
     thrown = 0
+}
+else
+	{
+		hitLag--
+		x = hitX
+		y = hitY
+		image_speed = 0
+		
+	}

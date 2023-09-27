@@ -1,8 +1,35 @@
 scr_initinput()
+if (!variable_global_exists("saveroom"))
+{
 global.saveroom = ds_list_create()
+global.escaperoom = ds_list_create()
+    global.lap = 0
+    global.laps = 0
+	global.style = 0
+	ini_open("saveData.ini")
+	global.option_master_volume = ini_read_real("Option", "master_volume", 1)
+    global.option_music_volume = ini_read_real("Option", "music_volume", 1)
+    global.option_sfx_volume = ini_read_real("Option", "sfx_volume", 1)
+	ini_close()
+	set_master_gain(global.option_master_volume)
+	global.bigfont = font_add_sprite_ext(spr_font, "ABCDEFGHIJKLMNOPQRSTUVWXYZ!.1234567890:", 1, 0)
+global.stylethreshold = 0
+global.stylemultiplier = 0
+global.heattime = 1
+global.baddiespeed = 1
+global.baddiepowerup = 0
+global.baddierage = 0
+}
+doublejump = 0
+knightmiddairstop = 0
+knightmomentum = 0
 grav = 0.5
 hsp = 0
 vsp = 0
+hitX = x
+hitY = y
+hitLag = 0
+afterima = 0
 global.playerhealth = 5
 xscale = 1
 yscale = 1
@@ -89,7 +116,7 @@ angry = 0
 baddiegrabbedID = 0
 character = "P"
 scr_characterspr()
-paletteselect = 2
+paletteselect =1
 global.panic = 0
 global.snickchallenge = 0
 colorchange = 0

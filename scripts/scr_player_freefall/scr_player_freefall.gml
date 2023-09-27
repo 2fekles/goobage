@@ -1,7 +1,9 @@
 function scr_player_freefall()
 {
 	landAnim = 1
-	vsp = 15
+	vsp = 20
+		if (floor(image_index) == (image_number - 1) && sprite_index == spr_bodyslamstart)
+        sprite_index = spr_bodyslamfall
 	move = (key_left + key_right)
 	if (!grounded)
 	{
@@ -70,4 +72,6 @@ function scr_player_freefall()
 	    freefallstart = 0
 	}
 	image_speed = 0.35
+    if (sprite_index == spr_bodyslamstart)
+        image_speed = 0.4
 }

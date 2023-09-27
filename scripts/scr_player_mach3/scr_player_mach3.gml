@@ -5,6 +5,11 @@ function scr_player_mach3()
 	    if (windingAnim < 2000)
 	        windingAnim++
 	}
+	if grounded
+            {
+                if (scr_slope() && hsp != 0 && movespeed > 10)
+                    scr_player_addslopemomentum(0.2, 0.4)
+            }
 	if ((!(place_meeting(x, (y + 1), obj_railh))) && (!(place_meeting(x, (y + 1), obj_railh2))))
 	    hsp = (xscale * movespeed)
 	else if place_meeting(x, (y + 1), obj_railh)
@@ -154,5 +159,23 @@ function scr_player_mach3()
 	if key_taunt2
 	{
 	    scr_dotaunt()
+	}
+	if (key_slap2 && character == "P" && suplexmove == 0 && (!((shotgunAnim == 1 && key_up))))
+	{
+		if !instance_exists(obj_crazyrunothereffect)
+	    instance_create(x, y, obj_crazyrunothereffect)
+	    if (!instance_exists(obj_crazyruneffect))
+	        instance_create(x, y, obj_crazyruneffect)
+	    suplexmove = 1
+	    scr_soundeffect(sfx_suplexdash)
+	    state = 21
+		flash = 1
+		if ((!instance_exists(obj_superdashcloud)) && grounded)
+	    instance_create(x, y, obj_superdashcloud)
+	    image_index = 0
+	    
+	        sprite_index = !grounded ? spr_player_suplexgrabjumpstart : spr_player_suplexdash
+	    if movespeed < 6
+	    movespeed = 6
 	}
 }

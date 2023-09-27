@@ -45,7 +45,7 @@ function scr_player_mach2()
 	{
 	    if (machpunchAnim == 0 && sprite_index != spr_mach && sprite_index != spr_player_mach3 && sprite_index != spr_player_machhit)
 	    {
-	        if (sprite_index != spr_player_machhit && sprite_index != spr_player_rollgetup)
+	        if (sprite_index != spr_player_machhit && sprite_index != spr_player_rollgetup && sprite_index != spr_player_mach1)
 	            sprite_index = spr_mach
 	    }
 	    if (machpunchAnim == 1)
@@ -86,7 +86,7 @@ function scr_player_mach2()
 	}
 	if key_jump
 	    input_buffer_jump = 0
-	if (key_down && (!(place_meeting(x, y, obj_dashpad))))
+	if (key_down && sprite_index != spr_player_mach1 && (!(place_meeting(x, y, obj_dashpad))))
 	{
 	    instance_create(x, y, obj_jumpdust)
 	    flash = 0
@@ -109,6 +109,8 @@ function scr_player_mach2()
 	        image_xscale = other.xscale
 	}
 	if (grounded && floor(image_index) == (image_number - 1) && sprite_index == spr_player_rollgetup)
+	    sprite_index = spr_player_mach
+		if (grounded && floor(image_index) == (image_number - 1) && sprite_index == spr_player_mach1)
 	    sprite_index = spr_player_mach
 	if ((!grounded) && sprite_index != spr_secondjump2 && sprite_index != spr_mach2jump && sprite_index != spr_player_mach2jump && sprite_index != spr_player_walljumpstart && sprite_index != spr_player_walljumpend&& sprite_index != spr_player_longjump)
 	    sprite_index = spr_secondjump1
@@ -147,4 +149,36 @@ function scr_player_mach2()
 	    image_speed = 0.65
 		else if sprite_index = spr_player_longjump && floor(image_index) == (image_number - 1)
 		image_speed = 0
+		if (key_slap2 && character == "P" && suplexmove == 0 && (!((shotgunAnim == 1 && key_up))))
+	{
+		if !instance_exists(obj_crazyrunothereffect)
+	    instance_create(x, y, obj_crazyrunothereffect)
+	    if (!instance_exists(obj_crazyruneffect))
+	        instance_create(x, y, obj_crazyruneffect)
+	    suplexmove = 1
+	    scr_soundeffect(sfx_suplexdash)
+	    state = 21
+		flash = 1
+		if ((!instance_exists(obj_superdashcloud)) && grounded)
+	    instance_create(x, y, obj_superdashcloud)
+	    image_index = 0
+	    
+	        sprite_index = !grounded ? spr_player_suplexgrabjumpstart : spr_player_suplexdash
+	    if movespeed < 6
+	    movespeed = 6
+	}
+	if (key_slap2 && character == "P" && shotgunAnim == 1 && key_up)
+	{
+	    scr_soundeffect(sfx_killingblow)
+	    state = 37
+	    with (instance_create(x, y, obj_pistoleffect))
+	        image_xscale = other.image_xscale
+	    image_index = 0
+	    sprite_index = spr_player_shotgun
+	    instance_create((x + (image_xscale * 20)), (y + 20), obj_shotgunbullet)
+	    with (instance_create((x + (image_xscale * 20)), (y + 20), obj_shotgunbullet))
+	        spdh = 4
+	    with (instance_create((x + (image_xscale * 20)), (y + 20), obj_shotgunbullet))
+	        spdh = -4
+	}
 }

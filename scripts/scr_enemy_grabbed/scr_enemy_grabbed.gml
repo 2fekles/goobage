@@ -79,8 +79,10 @@ function scr_enemy_grabbed()
 	if (obj_player1.state == 2 && obj_player1.image_index < 5)
 	{
 	    x = (obj_player1.x + (obj_player1.xscale * 60))
+		
 	    y = obj_player1.y
 	}
+	
 	if (obj_player1.state == 47)
 	{
 	    alarm[3] = 3

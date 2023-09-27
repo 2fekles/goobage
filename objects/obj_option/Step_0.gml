@@ -1,11 +1,11 @@
-if (!instance_exists(obj_keyconfig))
+if (!instance_exists(obj_keyconfig) && !instance_exists(obj_audioconfig))
 {
     if (obj_player.key_up2 && optionselected > 0)
     {
         optionselected -= 1
         scr_soundeffect(sfx_step)
     }
-    if (obj_player.key_down2 && optionselected < 2)
+    if (obj_player.key_down2 && optionselected < 3)
     {
         optionselected += 1
         scr_soundeffect(sfx_step)
@@ -68,6 +68,18 @@ if (optionselected == 2)
         {
             visible = false
             instance_create(x, y, obj_keyconfig)
+        }
+    }
+}
+if (optionselected == 3)
+{
+    if !instance_exists(obj_audioconfig)
+    {
+        if (obj_player.key_jump || keyboard_check_pressed(vk_return))
+        {
+            visible = false
+            with (instance_create(x, y, obj_audioconfig))
+                depth = (other.depth - 1)
         }
     }
 }
