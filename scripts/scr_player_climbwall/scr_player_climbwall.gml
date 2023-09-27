@@ -26,13 +26,11 @@ function scr_player_climbwall()
 	{
 	    instance_create(x, y, obj_jumpdust)
 	    vsp = 0
-	    if (movespeed >= 8)
+	    movespeed = wallspeed
 	        state = 69
-	    if (movespeed >= 12)
-	    {
-	        state = 89
+	    
 	        sprite_index = spr_mach4
-	    }
+	    
 	}
 	if key_jump
 	{
