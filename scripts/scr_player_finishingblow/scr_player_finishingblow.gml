@@ -1,5 +1,6 @@
 function scr_player_finishingblow()
 {
+	if movespeed != 0
 	hsp = xscale * movespeed
 	
 		if afterima > 0

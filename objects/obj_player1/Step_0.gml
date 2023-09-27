@@ -312,6 +312,25 @@ if (character == "P")
         anger -= 1
     }
 }
+if y > (room_height + 300) || y < -800
+{
+    x = roomstartx
+    y = roomstarty
+    visible = true
+    with (obj_camera)
+    {
+        shake_mag = 3
+        shake_mag_acc = (3 / room_speed)
+    }
+    
+    state = 0
+    
+    hsp = 0
+    vsp = 0
+    scr_soundeffect(sfx_groundpound)
+    
+    vsp = 10
+}
 if (sprite_index == spr_player_winding && state != 0)
     windingAnim = 0
 if (state != 45)

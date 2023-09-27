@@ -131,7 +131,7 @@ function scr_initenemy()
     stagger_jumpspeed = 4
     stagger_movespeed = 1
     stagger_dir = 1
-    hitLag = 25
+    hitLag = 0
     hitX = x
     hitY = y
     hitvsp = 0
