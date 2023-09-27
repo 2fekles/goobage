@@ -4,7 +4,7 @@ if (fadealpha > 1 && fadein == 0)
     {
         obj_pause.pause = 0
         instance_activate_all()
-        audio_resume_sound(obj_music.pausedmusic)
+        audio_resume_all()
     }
     else if (obj_pause.pause == 0)
     {

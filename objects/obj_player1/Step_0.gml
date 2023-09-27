@@ -3,6 +3,9 @@ if (hitLag <= 0)
 scr_getinput()
 switch state
 {
+	case -1:
+	scr_player_knightpepbump()
+	break
     case 0:
         scr_player_normal()
         break
