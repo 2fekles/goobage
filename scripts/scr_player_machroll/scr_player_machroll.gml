@@ -45,8 +45,11 @@ function scr_player_machroll()
 	}
 	if ((!instance_exists(obj_cloudeffect)) && grounded)
 	    instance_create(x, (y + 43), obj_cloudeffect)
+		if scr_slope()
+                movespeed += 0.1
 		if !_css
 		{
+			
 	if grounded
 	    sprite_index = spr_machroll
 		else
@@ -55,8 +58,8 @@ function scr_player_machroll()
 		}
 		}
 		if sprite_index == spr_dive
-	    vsp = 10
-		if grounded && key_jump2 && !place_meeting(x,y - 1, obj_solid)
+	    vsp = 15
+		if grounded && key_jump2 && !place_meeting(x,y - 1, obj_solid) && _css
     {
         sprite_index = spr_player_jumpdive1
         image_index = 0
@@ -88,4 +91,12 @@ function scr_player_machroll()
 	    if (character == "P")
 	        sprite_index = spr_player_rollgetup
 	}
+	if key_jump && sprite_index = spr_dive
+	{
+	    
+	        image_index = 0
+	        state = 90
+	        sprite_index = spr_bodyslamstart
+	        vsp = -5
+	    }
 }
