@@ -20,6 +20,9 @@ global.baddiespeed = 1
 global.baddiepowerup = 0
 global.baddierage = 0
 }
+doublejump = 0
+knightmiddairstop = 0
+knightmomentum = 0
 grav = 0.5
 hsp = 0
 vsp = 0

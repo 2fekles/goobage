@@ -14,6 +14,23 @@ function Approach(argument0, argument1, argument2) //gml_Script_Approach
     }
     return argument0;
 }
+function point_in_camera(argument0, argument1, argument2) //gml_Script_point_in_camera
+{
+    var cam_x = camera_get_view_x(argument2)
+    var cam_y = camera_get_view_y(argument2)
+    var cam_w = camera_get_view_width(argument2)
+    var cam_h = camera_get_view_height(argument2)
+    return point_in_rectangle(argument0, argument1, cam_x, cam_y, (cam_x + cam_w), (cam_y + cam_h));
+}
+
+function point_in_camera_ext(argument0, argument1, argument2, argument3, argument4) //gml_Script_point_in_camera_ext
+{
+    cam_x = camera_get_view_x(argument2)
+    cam_y = camera_get_view_y(argument2)
+    cam_w = camera_get_view_width(argument2)
+    cam_h = camera_get_view_height(argument2)
+    return point_in_rectangle(argument0, argument1, (cam_x - argument3), (cam_y - argument4), ((cam_x + cam_w) + argument3), ((cam_y + cam_h) + argument4));
+}
 function bbox_in_camera(argument0, argument1)
 {
     if is_undefined(argument1)

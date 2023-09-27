@@ -44,9 +44,9 @@ function scr_collide_destructibles()
 	}
 	if (vsp >= 0 && (state == 73 || state == 76))
 	{
-	    if place_meeting(x, ((y + vsp) + 2), obj_destructibles)
+	    if place_meeting(x, ((y + sign(vsp)) + 2), obj_destructibles)
 	    {
-	        with (instance_place(x, ((y + vsp) + 2), obj_destructibles))
+	        with (instance_place(x, ((y + sign(vsp)) + 2), obj_destructibles))
 	        {
 	            
 	            instance_destroy()

@@ -39,8 +39,11 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player1) && obj_player1
 				}
 				global.style += (2 + global.combo)
                 scr_soundeffect(sfx_punch)
+				
                 instance_destroy(other.baddieID)
                 instance_destroy(other.id)
+				
+				
                 global.hit += 1
                 global.combotime = 60
 				global.heattime = 60

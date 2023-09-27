@@ -15,12 +15,17 @@ function scr_player_freefallland()
 	alarm[4] = 14
 	vsp = 0
 	hsp = 0
-	if (floor(image_index) == (image_number - 1) && (!(superslam > 30)))
-	    state = 0
-	if (floor(image_index) == (image_number - 1) && superslam > 30)
+	if floor(image_index) == (image_number - 1)
 	{
-	    state = 39
-	    vsp = -7
+	    state = 57
+        if key_jump2
+            vsp = -14         
+else
+            vsp = -8
+            sprite_index = spr_player_machfreefall
+        
+        jumpstop = 1
 	}
+	
 	image_speed = 0.35
 }

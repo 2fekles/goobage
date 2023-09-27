@@ -5,7 +5,19 @@ if (active && sprite_index != spr_secretportal_open  && ds_list_find_index(globa
         sprite_index = spr_secretportal_close
         image_index = 0
     }
-    
+    if (!touched)
+    {
+        if (!obj_music.secret)
+        {
+            obj_music.secret = 1
+            obj_music.secretend = 0
+        }
+        else
+        {
+            obj_music.secretend = 1
+            obj_music.secret = 0
+        }
+    }
     touched = 1
     playerid = other.id
     other.x = x
