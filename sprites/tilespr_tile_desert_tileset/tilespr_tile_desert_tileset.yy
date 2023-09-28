@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "GMS2 TileSets",
-    "path": "folders/Sprites/GMS2 TileSets.yy",
+    "name": "TIlesets",
+    "path": "folders/Sprites/TIlesets.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

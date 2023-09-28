@@ -1684,6 +1684,7 @@
     {"id":{"name":"spr_hard","path":"sprites/spr_hard/spr_hard.yy",},},
     {"id":{"name":"spr_easy","path":"sprites/spr_easy/spr_easy.yy",},},
     {"id":{"name":"spr_title","path":"sprites/spr_title/spr_title.yy",},},
+    {"id":{"name":"sfx_bananaslip","path":"sounds/sfx_bananaslip/sfx_bananaslip.yy",},},
     {"id":{"name":"spr_resulttextOMG","path":"sprites/spr_resulttextOMG/spr_resulttextOMG.yy",},},
     {"id":{"name":"spr_resulttext","path":"sprites/spr_resulttext/spr_resulttext.yy",},},
     {"id":{"name":"obj_secretportalstart","path":"objects/obj_secretportalstart/obj_secretportalstart.yy",},},

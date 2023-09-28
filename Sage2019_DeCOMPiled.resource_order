@@ -890,6 +890,7 @@
     {"name":"spr_hard","order":834,"path":"sprites/spr_hard/spr_hard.yy",},
     {"name":"spr_easy","order":835,"path":"sprites/spr_easy/spr_easy.yy",},
     {"name":"spr_title","order":836,"path":"sprites/spr_title/spr_title.yy",},
+    {"name":"sfx_bananaslip","order":2,"path":"sounds/sfx_bananaslip/sfx_bananaslip.yy",},
     {"name":"spr_resulttextOMG","order":837,"path":"sprites/spr_resulttextOMG/spr_resulttextOMG.yy",},
     {"name":"spr_resulttext","order":838,"path":"sprites/spr_resulttext/spr_resulttext.yy",},
     {"name":"obj_secretportalstart","order":1,"path":"objects/obj_secretportalstart/obj_secretportalstart.yy",},
