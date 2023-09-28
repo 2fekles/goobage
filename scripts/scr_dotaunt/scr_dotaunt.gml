@@ -1,7 +1,7 @@
 
 function scr_dotaunt()
 {
-scr_soundeffect_pitched(sfx_taunt,choose(8,13) / 10)
+scr_soundeffect_pitched(sfx_taunt,irandom_range(9,11) / 10)
 	    taunttimer = 20
 	    tauntstoredmovespeed = movespeed
 	    tauntstoredsprite = sprite_index
