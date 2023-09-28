@@ -1,5 +1,6 @@
 if (drop == 0)
 {
+	scr_soundeffect(sfx_bananaslip)
     with (obj_player)
     {
         other.drop = 1

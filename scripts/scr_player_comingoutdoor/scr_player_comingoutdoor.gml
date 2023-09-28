@@ -17,6 +17,8 @@ function scr_player_comingoutdoor()
 	    state = 0
 	    image_alpha = 1
 	}
+	if (sprite_index != spr_Timesup)
+    
 	sprite_index = spr_walkfront
 	image_speed = 0.35
 }
