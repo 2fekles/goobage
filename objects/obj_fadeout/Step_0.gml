@@ -27,7 +27,7 @@ if instance_exists(obj_player)
 {
     with (obj_player1)
     {
-        if (other.fadein == 1 && (obj_player1.state == 77 || obj_player1.state == 63) && (place_meeting(x, y, obj_door) || place_meeting(x, y, obj_startgate)))
+        if (other.fadein == 1 && (obj_player1.state == 77 || obj_player1.state == 63) && (place_meeting(x, y, obj_door) || place_meeting(x, y, obj_startgate)|| place_meeting(x, y, obj_exitgate)))
         {
             state = 60
             image_index = 0
@@ -39,7 +39,7 @@ if instance_exists(obj_player)
     {
         with (obj_player2)
         {
-            if (other.fadein == 1 && (obj_player2.state == 77 || obj_player2.state == 63) && (place_meeting(x, y, obj_door) || place_meeting(x, y, obj_startgate)))
+            if (other.fadein == 1 && (obj_player2.state == 77 || obj_player2.state == 63) && (place_meeting(x, y, obj_door) || place_meeting(x, y, obj_startgate)|| place_meeting(x, y, obj_exitgate)))
             {
                 state = 60
                 image_index = 0

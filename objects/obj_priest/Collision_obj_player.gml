@@ -9,8 +9,10 @@ if _transfo
                 xscale = sign(hsp)
             movespeed = abs(hsp)
         }
-
+if !key_attack
         state = 0
+		else
+		state = 69
         dir = xscale
 }
 if alarm[0] <= 0
