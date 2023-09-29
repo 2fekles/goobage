@@ -91,7 +91,7 @@ function meta_panic() {
 
 // Show Collisions
 function sh_showcollisions(args) {
-	if is_undefined(args[1])
+	if is_undefined(args[1]) || is_string(args[1])
 		args[1] = !global.showcollisions
 	global.showcollisions = args[1]
 	event_perform(ev_other, ev_room_start)
@@ -105,7 +105,7 @@ function meta_showcollisions() {
 
 // Room Goto
 function sh_player_room(args) {
-	if is_undefined(args[1])
+	if is_undefined(args[1]) 
 		exit
 	if is_undefined(args[2])
 		exit
@@ -122,17 +122,23 @@ function sh_player_room(args) {
 function meta_player_room() {
 	return {
 		description: "Go to a given room",
+		suggestions: ["N/A",["N/A", "A", "B", "C", "D", "E"]],
 		arguments: ["<targetRoom>", "<targetDoor>"],
 	}
 }
 
 // Set State
 function sh_player_set_state(args) {
-	
+	if is_undefined(args[1]) 
+		exit
+	with obj_player{
+		state = args[1]
+	}
 }
 function meta_player_set_state() {
 	return {
 		description: "Changes the player state",
+		suggestions: ["states.normal"],
 		arguments: ["<state>"],
 	}
 }

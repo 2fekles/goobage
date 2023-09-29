@@ -1,5 +1,8 @@
 /// @description SETTINGS
-
+if !variable_global_exists("debugused")
+{
+	global.debugused = 1
+		
 depth = -500
 global.shellOpen = false
 
@@ -27,3 +30,4 @@ shell.closeFunction = closeShell
 // Custom keys
 shell.openKey = vk_f5
 shell.openModifiers = noone
+	}

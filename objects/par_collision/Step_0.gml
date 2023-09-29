@@ -1,0 +1,6 @@
+visible = global.showcollisions
+
+
+
+
+
