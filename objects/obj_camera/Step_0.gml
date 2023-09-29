@@ -2,6 +2,8 @@ if (room == rank_room || room == timesuproom || room == Realtitlescreen)
     visible = false
 else
     visible = true
+	if (collect_shake > 0)
+    collect_shake *= 0.5
 if (global.combo >= 10)
 {
     global.SAGEcombo10 = 1

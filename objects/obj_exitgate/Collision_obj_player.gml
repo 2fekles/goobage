@@ -1,3 +1,15 @@
+if obj_player.state == 60 && floor(image_index) == (image_number - 2)
+{
+    ds_list_add(global.saveroom, id)
+    image_index = 0
+    with (obj_camera)
+    {
+        shake_mag = 3
+        shake_mag_acc = (3 / room_speed)
+    }
+    obj_player.image_index = 0
+    obj_player.sprite_index = obj_player.spr_Timesup
+}
 with (obj_player)
 {
     if (grounded && x > (other.x - 160) && x < (other.x + 160) && key_up && (state == 0 || state == 68 || state == 69 || state == 89) && (global.panic == 1 || global.snickchallenge == 1))

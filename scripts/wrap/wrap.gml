@@ -1,4 +1,4 @@
-function wrap()
+function wrap_mrold()
 {
 	var _val = argument[0]
 	var _max = argument[2]

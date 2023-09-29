@@ -63,7 +63,7 @@ function scr_player_jump()
 	    if key_attack
 	        landAnim = 0
 	    input_buffer_secondjump = 0
-	    state = 0
+	    state = states.normal
 	    jumpAnim = 1
 	    jumpstop = 0
 	    image_index = 0
