@@ -8,7 +8,7 @@ if ((-obj_player.key_left2) && i > 0)
     i -= 1
     scr_soundeffect(sfx_step)
 }
-if (obj_player.key_slap2 || keyboard_check_pressed(vk_f5) || obj_player.key_start)
+if (obj_player.key_slap2 || keyboard_check_pressed(vk_f6) || obj_player.key_start)
 {
     instance_destroy()
     obj_mainmenuselect.selected = 0

@@ -1,3 +1,8 @@
+// Debug stuff
+global.shellOpen = false
+global.showcollisions = false
+
+// The rest
 scr_initinput2()
 grav = 0.5
 hsp = 0

@@ -1,3 +1,8 @@
+// Debug stuff
+global.shellOpen = false
+global.showcollisions = false
+
+// The rest
 scr_initinput()
 scr_collision_init()
 if (!variable_global_exists("saveroom"))
