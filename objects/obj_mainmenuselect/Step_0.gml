@@ -1,6 +1,6 @@
 if (selected == 0)
 {
-    if keyboard_check_pressed(vk_f5)
+    if keyboard_check_pressed(vk_f6)
     {
         instance_create(0, 0, obj_manual)
         selected = 1

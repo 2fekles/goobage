@@ -1,3 +1,8 @@
+// Debug stuff
+global.shellOpen = false
+global.showcollisions = false
+
+// The rest
 scr_initinput()
 global.saveroom = ds_list_create()
 grav = 0.5
