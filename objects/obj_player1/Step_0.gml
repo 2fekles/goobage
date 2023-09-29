@@ -277,7 +277,8 @@ switch state
         scr_player_current()
         break
 }
-
+if vsp > 2
+vsp += grav
 scr_playersounds()
 if (grounded && state != 21)
     suplexmove = 0
