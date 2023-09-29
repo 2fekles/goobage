@@ -23,7 +23,6 @@
     {"name":"Timelines","order":13,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings": [
-
     {"name":"obj_player1","order":1,"path":"objects/obj_player1/obj_player1.yy",},
     {"name":"obj_player2","order":2,"path":"objects/obj_player2/obj_player2.yy",},
     {"name":"obj_pause","order":3,"path":"objects/obj_pause/obj_pause.yy",},
@@ -229,6 +228,7 @@
     {"name":"spr_knightpep_bump","order":1255,"path":"sprites/spr_knightpep_bump/spr_knightpep_bump.yy",},
     {"name":"spr_tv_combobubblefill","order":1231,"path":"sprites/spr_tv_combobubblefill/spr_tv_combobubblefill.yy",},
     {"name":"obj_motocycle","order":198,"path":"objects/obj_motocycle/obj_motocycle.yy",},
+    {"name":"scr_debugcommands","order":1260,"path":"scripts/scr_debugcommands/scr_debugcommands.yy",},
     {"name":"obj_haystack","order":199,"path":"objects/obj_haystack/obj_haystack.yy",},
     {"name":"obj_noisehotair","order":200,"path":"objects/obj_noisehotair/obj_noisehotair.yy",},
     {"name":"obj_noisematch","order":201,"path":"objects/obj_noisematch/obj_noisematch.yy",},
@@ -271,6 +271,7 @@
     {"name":"obj_skateboarddebris2","order":237,"path":"objects/obj_skateboarddebris2/obj_skateboarddebris2.yy",},
     {"name":"obj_parentparticle","order":238,"path":"objects/obj_parentparticle/obj_parentparticle.yy",},
     {"name":"obj_tntblockdebris","order":239,"path":"objects/obj_tntblockdebris/obj_tntblockdebris.yy",},
+    {"name":"font_console","order":1261,"path":"fonts/font_console/font_console.yy",},
     {"name":"obj_vsscreen","order":240,"path":"objects/obj_vsscreen/obj_vsscreen.yy",},
     {"name":"obj_goalsign","order":241,"path":"objects/obj_goalsign/obj_goalsign.yy",},
     {"name":"obj_siren","order":242,"path":"objects/obj_siren/obj_siren.yy",},
@@ -376,11 +377,13 @@
     {"name":"spr_heatmeter_palette","order":1250,"path":"sprites/spr_heatmeter_palette/spr_heatmeter_palette.yy",},
     {"name":"spr_priest_pray","order":1258,"path":"sprites/spr_priest_pray/spr_priest_pray.yy",},
     {"name":"spr_font_palette","order":1224,"path":"sprites/spr_font_palette/spr_font_palette.yy",},
+    {"name":"obj_debugcontroller","order":1259,"path":"objects/obj_debugcontroller/obj_debugcontroller.yy",},
     {"name":"spr_font_collect","order":1223,"path":"sprites/spr_font_collect/spr_font_collect.yy",},
     {"name":"scr_dotaunt","order":1,"path":"scripts/scr_dotaunt/scr_dotaunt.yy",},
     {"name":"spr_unownSlopePlatform","order":6,"path":"sprites/spr_unownSlopePlatform/spr_unownSlopePlatform.yy",},
     {"name":"spr_player_longjump","order":1220,"path":"sprites/spr_player_longjump/spr_player_longjump.yy",},
     {"name":"obj_slope","order":4,"path":"objects/obj_slope/obj_slope.yy",},
+    {"name":"obj_shell","order":1258,"path":"objects/obj_shell/obj_shell.yy",},
     {"name":"obj_escapecollect","order":327,"path":"objects/obj_escapecollect/obj_escapecollect.yy",},
     {"name":"spr_cheeseblob","order":1,"path":"sprites/spr_cheeseblob/spr_cheeseblob.yy",},
     {"name":"spr_cheesemaker","order":2,"path":"sprites/spr_cheesemaker/spr_cheesemaker.yy",},
@@ -1646,10 +1649,5 @@
     {"name":"tile_medievalinterrior","order":1,"path":"tilesets/tile_medievalinterrior/tile_medievalinterrior.yy",},
     {"name":"spr_ratblock_dead","order":1252,"path":"sprites/spr_ratblock_dead/spr_ratblock_dead.yy",},
     {"name":"spr_priest_idle","order":1257,"path":"sprites/spr_priest_idle/spr_priest_idle.yy",},
-{"name":"obj_shell","order":1258,"path":"objects/obj_shell/obj_shell.yy",},
-{"name":"obj_debugcontroller","order":1259,"path":"objects/obj_debugcontroller/obj_debugcontroller.yy",},
-{"name":"scr_debugcommands","order":1260,"path":"scripts/scr_debugcommands/scr_debugcommands.yy",},
-{"name":"font_console","order":1261,"path":"fonts/font_console/font_console.yy",},
-
   ],
 }

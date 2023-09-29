@@ -38,6 +38,7 @@ function scr_player_backbreaker()
 	    movespeed = tauntstoredmovespeed
 	    sprite_index = tauntstoredsprite
 	    state = tauntstoredstate
+		image_speed = 0.35
 	}
 	if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_eatspaghetti)
 	    state = 0

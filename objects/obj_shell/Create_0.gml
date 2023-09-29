@@ -75,6 +75,28 @@ if (instance_number(object_index) > 1) {
 /// Opens the shell
 function open() {
 	isOpen = true;
+	with obj_player1{
+		key_up = 0
+	key_up2 = 0
+	key_right = 0
+	key_right2 = 0
+	key_left = 0
+	key_left2 = 0
+	key_down = 0
+	key_down2 = 0
+	key_jump = 0
+	key_jump2 = 0
+	key_slap = 0
+	key_slap2 = 0
+	key_taunt = 0
+	key_taunt2 = 0
+	key_attack = 0
+	key_attack2 = 0
+	key_shoot = 0
+	key_shoot2 = 0
+	key_start = 0
+	key_escape = 0
+	}
 	keyboard_string = "";
 	if (!is_undefined(openFunction)) {
 		openFunction();
@@ -97,6 +119,9 @@ function close() {
 	// Save the current history to disk, if enabled
 	if (saveHistory) {
 		self._save_history();
+	}
+	with obj_player1{
+		scr_getinput()
 	}
 }
 
