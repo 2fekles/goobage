@@ -1,6 +1,8 @@
 image_speed = 0.35
-sprgot = 965
-spridle = 964
-spr = spr_cheeseblob
+sprgot = spr_treasure1pick
+spridle = spr_treasure1
+spr = spr_treasure1
 if (obj_player.character == "S")
     instance_destroy()
+active = 0
+time = 0

@@ -1,4 +1,5 @@
 scr_initinput()
+scr_collision_init()
 if (!variable_global_exists("saveroom"))
 {
 global.saveroom = ds_list_create()
@@ -19,6 +20,9 @@ global.heattime = 1
 global.baddiespeed = 1
 global.baddiepowerup = 0
 global.baddierage = 0
+}
+enum states{
+	normal,
 }
 doublejump = 0
 knightmiddairstop = 0

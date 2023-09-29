@@ -6,7 +6,7 @@ switch state
 	case -1:
 	scr_player_knightpepbump()
 	break
-    case 0:
+    case states.normal:
         scr_player_normal()
         break
     case 2:
@@ -494,9 +494,9 @@ if (state == 69 && (!instance_exists(obj_speedlines)))
     instance_create(x, y, obj_speedlines)
 scr_collide_destructibles()
 if (state != 7 && state != 77 && state != 62 && state != 3 && state != 60 && state != 87 && state != 55 && state != 63 && state != 18 && state != 35 && state != 22 && state != 54)
-    scr_collide_player()
+    scr_collision()
 if (state == 87)
-    scr_collide_player()
+    scr_collision()
 	
 if (global.style > 55 && global.stylethreshold < 3)
 {

@@ -172,7 +172,19 @@ function scr_player_knightpep()
         knightmomentum += 0.35
         
     }
-    if (scr_slope() && sprite_index != spr_knightpep_thunder)
+    if (place_meeting(x, y+ 1, obj_slopePlatform) && sprite_index != spr_knightpep_thunder)
+    {
+        if (sprite_index == spr_knightpep_downtrust)
+            movespeed = 11
+        else
+            movespeed = 8
+        with (instance_place(x, (y + 1), obj_slopePlatform))
+            other.xscale = (-sign(image_xscale))
+        state = 17
+        sprite_index = spr_knightpep_downslope
+        slope_buffer = 20
+    }
+	if (scr_slope() && sprite_index != spr_knightpep_thunder)
     {
         if (sprite_index == spr_knightpep_downtrust)
             movespeed = 11

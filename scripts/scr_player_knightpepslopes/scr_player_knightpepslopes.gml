@@ -20,9 +20,7 @@ function scr_player_knightpepslopes()
         jumpstop = 0
 		if place_meeting(x + sign(hsp),y,obj_ratblock)
 	{
-		hitLag = 10
-				hitX = x
-				hitY = y
+		
 				scr_soundeffect(sfx_punch)
 		with instance_place(x + sign(hsp),y,obj_ratblock)
 		{
@@ -30,9 +28,9 @@ function scr_player_knightpepslopes()
 		}
 	
 	}
-    if ((!scr_slope()) && grounded)
+    if ((!scr_slope()) && grounded && !place_meeting(x,y+1,obj_slopePlatform))
         sprite_index = spr_knightpep_charge
-    if scr_slope()
+    if scr_slope() || place_meeting(x,y+1,obj_slopePlatform)
         sprite_index = spr_knightpep_downslope
     if (input_buffer_jump < 8)
     {
@@ -67,11 +65,22 @@ function scr_player_knightpepslopes()
         {
             if (other.xscale == (-sign(image_xscale)))
             {
-                if (other.movespeed < 14)
+                if (other.movespeed < 17)
                     other.movespeed += 0.25
             }
         }
     }
+	if place_meeting(x, y + 1, obj_slopePlatform)
+	{
+		with (instance_place(x, (y + 1), obj_slopePlatform))
+        {
+            if (other.xscale == (-sign(image_xscale)))
+            {
+                if (other.movespeed < 17)
+                    other.movespeed += 0.25
+            }
+        }
+	}
     if ((!grounded) && key_down2 && sprite_index != spr_knightpep_downtrust)
     {
         flash = 1

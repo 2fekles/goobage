@@ -24,7 +24,7 @@
     "name": "texture_tilesets",
     "path": "texturegroups/texture_tilesets",
   },
-  "tile_count": 300,
+  "tile_count": 306,
   "tileAnimation": {
     "FrameData": [
       0,
@@ -327,6 +327,12 @@
       297,
       298,
       299,
+      300,
+      301,
+      302,
+      303,
+      304,
+      305,
     ],
     "SerialiseFrameCount": 1,
   },
