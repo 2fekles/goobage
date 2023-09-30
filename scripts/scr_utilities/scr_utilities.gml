@@ -1,3 +1,214 @@
+function get_control_string(argument0)
+{
+    switch argument0
+    {
+        case 27:
+            return "Escape";
+        case 112:
+            return "F1";
+        case 113:
+            return "F2";
+        case 114:
+            return "F3";
+        case 115:
+            return "F4";
+        case 116:
+            return "F5";
+        case 117:
+            return "F6";
+        case 118:
+            return "F7";
+        case 119:
+            return "F8";
+        case 120:
+            return "F9";
+        case 121:
+            return "F10";
+        case 122:
+            return "F11";
+        case 123:
+            return "F12";
+        case 44:
+            return "Print Screen";
+        case 19:
+            return "Pause";
+        case 49:
+            return "[1]";
+        case 50:
+            return "[2]";
+        case 51:
+            return "[3]";
+        case 52:
+            return "[4]";
+        case 53:
+            return "[5]";
+        case 54:
+            return "[6]";
+        case 55:
+            return "[7]";
+        case 56:
+            return "[8]";
+        case 57:
+            return "[9]";
+        case 48:
+            return "[0]";
+        case 8:
+            return "Backspace";
+        case 45:
+            return "Insert";
+        case 36:
+            return "Home";
+        case 33:
+            return "Page Up";
+        case 9:
+            return "Tab";
+        case 81:
+            return "Q";
+        case 87:
+            return "W";
+        case 69:
+            return "E";
+        case 82:
+            return "R";
+        case 84:
+            return "T";
+        case 89:
+            return "Y";
+        case 85:
+            return "U";
+        case 73:
+            return "I";
+        case 79:
+            return "O";
+        case 80:
+            return "P";
+        case 35:
+            return "End";
+        case 34:
+            return "Page Down";
+        case 103:
+            return "Num 7";
+        case 104:
+            return "Num 8";
+        case 105:
+            return "Num 9";
+        case 43:
+            return "[+]";
+        case 65:
+            return "A";
+        case 83:
+            return "S";
+        case 68:
+            return "D";
+        case 70:
+            return "F";
+        case 71:
+            return "G";
+        case 72:
+            return "H";
+        case 74:
+            return "J";
+        case 75:
+            return "K";
+        case 76:
+            return "L";
+        case 13:
+            return "Enter";
+        case 100:
+            return "Num 4";
+        case 101:
+            return "Num 5";
+        case 102:
+            return "Num 6";
+        case 16:
+            return "$";
+        case 90:
+            return "Z";
+        case 88:
+            return "X";
+        case 67:
+            return "C";
+        case 86:
+            return "V";
+        case 66:
+            return "B";
+        case 78:
+            return "N";
+        case 77:
+            return "M";
+        case 38:
+            return "&";
+        case 97:
+            return "Num 1";
+        case 98:
+            return "Num 2";
+        case 99:
+            return "Num 3";
+        case 17:
+            return "Control";
+        case 18:
+            return "Alt";
+        case 32:
+            return "%";
+        case 37:
+            return ")";
+        case 39:
+            return "*";
+        case 40:
+            return "(";
+        case 96:
+            return "Num 0";
+        case 32771:
+            return "X";
+        case 32769:
+            return "A";
+        case 32770:
+            return "B";
+        case 32772:
+            return "Y";
+        case 32781:
+            return "w";
+        case 32782:
+            return "s";
+        case 32775:
+            return "i";
+        case 32774:
+            return "p";
+        case 32773:
+            return "u";
+        case 32776:
+            return "o";
+        case 32779:
+            return "l";
+        case 32780:
+            return "r";
+        case 32783:
+            return "a";
+        case 32784:
+            return "d";
+        default:
+            return "[unknown]";
+    }
+
+}
+function prompt_string(argument0)
+{
+    var font = "[spr_buttonfont]"
+    return concat(font, get_control_string(argument0), "[spr_tutorialfont]");
+}
+function scr_transfotip(argument0) //gml_Script_scr_transfotip
+{
+    if instance_exists(obj_transfotip)
+        instance_destroy(obj_transfotip)
+    if argument0 = undefined
+	argument0 = "[fa_center][fa_middle][spr_buttonfont][c_white]" + prompt_string(global.key_jump) + " Jump"
+    with (instance_create(x, y, obj_transfotip))
+    
+        text = argument0
+        
+        
+    
+}
 function Approach(argument0, argument1, argument2) //gml_Script_Approach
 {
     if (argument0 < argument1)
