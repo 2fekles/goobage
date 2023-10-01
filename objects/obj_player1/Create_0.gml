@@ -1,10 +1,12 @@
-// Debug stuff
+// Debug stuff - Compwnter
 global.shellOpen = false
 global.showcollisions = false
 
-// The rest
+// The rest - Compwnter
+bombgrabID = -4
 scr_initinput()
 scr_collision_init()
+// Save Stuff - Gooobrr
 if (!variable_global_exists("saveroom"))
 {
 global.saveroom = ds_list_create()

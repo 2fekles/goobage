@@ -45,16 +45,7 @@ if (state != 107)
     depth = 0
 if (state != 104)
     thrown = 0
-if (obj_player.x > (x - 400) && obj_player.x < (x + 400) && y <= (obj_player.y + 60) && y >= (obj_player.y - 60))
-{
-    if (state != 92 && obj_player1.state == 89)
-    {
-        state = 92
-        sprite_index = scaredspr
-        if (x != obj_player.x)
-            image_xscale = (-(sign((x - obj_player.x))))
-    }
-}
+scr_scareenemy()
 if (bombreset > 0)
     bombreset--
 if (x != obj_player.x && obj_player.state != 17 && obj_player.state != 23 && state != 95 && bombreset == 0 && grounded)

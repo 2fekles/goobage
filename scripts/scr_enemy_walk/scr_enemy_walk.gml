@@ -1,12 +1,8 @@
 function scr_enemy_walk()
 {
-	if (grounded && (!(place_meeting(x, (y + 1), obj_railh))) && (!(place_meeting(x, (y + 1), obj_railh2))))
-	    hsp = (image_xscale * movespeed)
-	else if (grounded && place_meeting(x, (y + 1), obj_railh))
-	    hsp = ((image_xscale * movespeed) - 5)
-	else if (grounded && place_meeting(x, (y + 1), obj_railh2))
-	    hsp = ((image_xscale * movespeed) + 5)
-	else if (object_index != obj_ancho)
+	if (object_index != obj_ancho)
+	hsp = image_xscale * movespeed
+	else
 	    hsp = 0
 	sprite_index = walkspr
 	image_speed = 0.35
