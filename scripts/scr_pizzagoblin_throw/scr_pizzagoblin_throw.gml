@@ -12,6 +12,7 @@ function scr_pizzagoblin_throw() //gml_Script_scr_pizzagoblin_throw
         global.throw_frame[obj_kentukykenny] = 8
         global.throw_frame[obj_pizzard] = 6
         global.throw_frame[obj_pepgoblin] = 1
+		global.throw_frame[obj_swedishmonkey] = 15
         global.throw_sprite = 12
         global.throw_sprite[obj_pizzagoblin] = spr_pizzagoblin_throwbomb
         global.throw_sprite[obj_cheeserobot] = spr_cheeserobot_attack
@@ -21,8 +22,10 @@ function scr_pizzagoblin_throw() //gml_Script_scr_pizzagoblin_throw
         global.throw_sprite[obj_robot] = spr_robot_attack
         global.throw_sprite[obj_kentukykenny] = spr_kentukykenny_throw
         global.throw_sprite[obj_pizzard] = spr_pizzard_shoot
+		global.throw_sprite[obj_swedishmonkey] = spr_swedishmonkey_eat
         global.throw_sprite[obj_pepgoblin] = spr_pepgoblin_kick
         global.reset_timer = 0
+		global.reset_timer[obj_swedishmonkey] = 200
         global.reset_timer[obj_pizzagoblin] = 200
         global.reset_timer[obj_cheeserobot] = 200
         global.reset_timer[obj_spitcheese] = 100
@@ -80,6 +83,21 @@ function scr_pizzagoblin_throw() //gml_Script_scr_pizzagoblin_throw
                     hsp = (other.image_xscale * 5)
                     vsp = -4
                 }
+                break
+				case obj_swedishmonkey:        
+                    with (instance_create(x, y, obj_slipnslide))
+                    {
+                        baddieID = other.id
+                        image_xscale = other.image_xscale
+                        hsp = ((-other.image_xscale) * 4)
+                        vsp = -5
+                    }
+                with (obj_slipnslide)
+                {
+                    if (baddieID == other.id)
+                        banana += 1
+                }
+                
                 break
             case obj_robot:
                 with (instance_create(x, y, obj_robotknife))

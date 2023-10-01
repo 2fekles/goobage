@@ -3,7 +3,7 @@ if (drop == 0)
 	scr_soundeffect(sfx_bananaslip)
     with (obj_player)
     {
-        other.drop = 1
+        instance_destroy(other)
         state = 59
 		sprite_index = spr_player_slipbanan1
         

@@ -44,16 +44,7 @@ stunfallspr = spr_pizzagoblin_stun
 walkspr = spr_pizzagoblin_walk
 stunspr = spr_pizzagoblin_stun
 grabbedspr = spr_pizzagoblin_stun
-if (obj_player.x > (x - 400) && obj_player.x < (x + 400) && y <= (obj_player.y + 60) && y >= (obj_player.y - 60))
-{
-    if (state != 92 && obj_player1.state == 89)
-    {
-        state = 92
-        sprite_index = scaredspr
-        if (x != obj_player.x)
-            image_xscale = (-(sign((x - obj_player.x))))
-    }
-}
+scr_scareenemy()
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = (0.15 * room_speed)
 if (state != 107)
