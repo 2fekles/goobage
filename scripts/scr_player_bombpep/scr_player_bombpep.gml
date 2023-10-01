@@ -1,3 +1,115 @@
+function scr_player_bombgrab() //gml_Script_scr_player_bombgrab
+{
+    move = (key_left + key_right)
+    if (sprite_index != spr_player_uppercutfinishingblow && sprite_index != spr_player_throw)
+        hsp = (move * movespeed)
+    else
+        hsp = 0
+    if (hsp != 0)
+        xscale = sign(hsp)
+    if (dir != xscale)
+    {
+        dir = xscale
+        movespeed = 0
+    }
+    if key_jump
+        input_buffer_jump = 0
+    if grounded
+        jumpstop = 0
+    if ((!key_jump2) && (!jumpstop) && vsp < 0.5 && (!stompAnim))
+    {
+        vsp /= 2
+        jumpstop = 1
+    }
+    image_speed = 0.35
+    if (sprite_index == spr_player_haulingstart && floor(image_index) == (image_number - 1))
+        sprite_index = spr_player_haulingidle
+    if (move != 0)
+    {
+        if (movespeed < 8)
+            movespeed += 0.5
+        else if (movespeed == 6)
+            movespeed = 6
+        else
+            movespeed -= 0.5
+    }
+    else
+        movespeed = 0
+    if (!instance_exists(bombgrabID))
+        state = 0
+    if (sprite_index != spr_player_haulingstart && sprite_index != spr_player_uppercutfinishingblow && sprite_index != spr_player_throw)
+    {
+        if grounded
+        {
+            if (hsp != 0)
+                sprite_index = spr_player_haulingwalk
+            else
+                sprite_index = spr_player_haulingidle
+        }
+        if (input_buffer_jump < 8 && grounded && vsp > 0)
+        {
+            vsp = -11
+            input_buffer_jump = 8
+            sprite_index = spr_player_haulingjump
+            image_index = 0
+        }
+        if (sprite_index == spr_player_haulingjump && floor(image_index) == (image_number - 1))
+            sprite_index = spr_player_haulingfall
+        if key_slap2
+        {
+            image_index = 0
+            if key_up
+            {
+                sprite_index = spr_player_uppercutfinishingblow
+                image_index = 3
+                with (bombgrabID)
+                {
+                    state = (0 << 0)
+                    vsp = -20
+                    hsp = 0
+                }
+            }
+            else
+            {
+                sprite_index = spr_player_throw
+                with (bombgrabID)
+                {
+                    state = (0 << 0)
+                    movespeed = 9
+                    vsp = -11
+                }
+            }
+            with (bombgrabID)
+            {
+                while scr_solid(x, y)
+                {
+                    y++
+                    if (y > room_height)
+                    {
+                        y = other.y
+                        break
+                    }
+                    else
+                        continue
+                }
+            }
+        }
+        else if key_down
+        {
+            if grounded
+            {
+                state = 0
+                with (bombgrabID)
+                    state = 0
+            }
+        }
+    }
+    else if (sprite_index != spr_player_haulingstart)
+    {
+        if (floor(image_index) == (image_number - 1))
+            state = 0
+    }
+}
 function scr_player_bombpep()
 {
 	if key_jump

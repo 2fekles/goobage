@@ -16,7 +16,14 @@ switch state
         if (place_meeting((x + hsp), y, obj_solid) && (!(place_meeting((x + hsp), y, obj_ratblock))))
             image_xscale *= -1
         if (place_meeting((x + hsp), y, obj_ratblock) || place_meeting(x, (y + vsp), obj_ratblock))
+		{
             instance_destroy()
+			instance_create(x, y, obj_bombexplosion)
+			with place_meeting((x + hsp), y, obj_ratblock)
+			{
+				instance_destroy()
+			}
+		}
         if (scr_solid((x + 1), y) || scr_solid((x - 1), y))
             drop = 1
         if grounded
@@ -30,6 +37,18 @@ switch state
         scr_collide()
         break
     case (4 << 0):
+	grounded = 0
+        x = playerid.x
+        y = (playerid.y - 40)
+        image_xscale = playerid.xscale
+        if (playerid.state != -2 && playerid.state != 42)
+            state = (0 << 0)
+        if (playerid.state == 42)
+        {
+            if playerid.grounded
+                instance_destroy()
+        }
+        break
         break
     default:
         state = (0 << 0)

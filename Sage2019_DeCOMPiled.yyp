@@ -758,6 +758,7 @@
     {"id":{"name":"scribble_color_get","path":"scripts/scribble_color_get/scribble_color_get.yy",},},
     {"id":{"name":"pal_swap_get_color_count","path":"scripts/pal_swap_get_color_count/pal_swap_get_color_count.yy",},},
     {"id":{"name":"scr_slope","path":"scripts/scr_slope/scr_slope.yy",},},
+    {"id":{"name":"obj_loadiingobject","path":"objects/obj_loadiingobject/obj_loadiingobject.yy",},},
     {"id":{"name":"scr_solid","path":"scripts/scr_solid/scr_solid.yy",},},
     {"id":{"name":"__scribble_tick","path":"scripts/__scribble_tick/__scribble_tick.yy",},},
     {"id":{"name":"scr_solid_player","path":"scripts/scr_solid_player/scr_solid_player.yy",},},
@@ -1724,6 +1725,7 @@
     {"id":{"name":"spr_landcloud","path":"sprites/spr_landcloud/spr_landcloud.yy",},},
     {"id":{"name":"spr_slidecloud","path":"sprites/spr_slidecloud/spr_slidecloud.yy",},},
     {"id":{"name":"spr_dashcloud","path":"sprites/spr_dashcloud/spr_dashcloud.yy",},},
+    {"id":{"name":"loadiingroom","path":"rooms/loadiingroom/loadiingroom.yy",},},
     {"id":{"name":"spr_dashcloud2","path":"sprites/spr_dashcloud2/spr_dashcloud2.yy",},},
     {"id":{"name":"spr_crazyruneffect","path":"sprites/spr_crazyruneffect/spr_crazyruneffect.yy",},},
     {"id":{"name":"spr_crazyrunothereffect","path":"sprites/spr_crazyrunothereffect/spr_crazyrunothereffect.yy",},},
@@ -2347,6 +2349,7 @@
     {"id":{"name":"readme","path":"notes/readme/readme.yy",},},
   ],
   "RoomOrderNodes": [
+    {"roomId":{"name":"loadiingroom","path":"rooms/loadiingroom/loadiingroom.yy",},},
     {"roomId":{"name":"Realtitlescreen","path":"rooms/Realtitlescreen/Realtitlescreen.yy",},},
     {"roomId":{"name":"Scootertransition","path":"rooms/Scootertransition/Scootertransition.yy",},},
     {"roomId":{"name":"leveltransitioncutscene","path":"rooms/leveltransitioncutscene/leveltransitioncutscene.yy",},},
