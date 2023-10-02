@@ -2110,6 +2110,7 @@
     {"id":{"name":"tile_stairs","path":"sprites/tile_stairs/tile_stairs.yy",},},
     {"id":{"name":"bg_castle4","path":"sprites/bg_castle4/bg_castle4.yy",},},
     {"id":{"name":"bg_castle4escape","path":"sprites/bg_castle4escape/bg_castle4escape.yy",},},
+    {"id":{"name":"spr_entrancegate","path":"sprites/spr_entrancegate/spr_entrancegate.yy",},},
     {"id":{"name":"bg_castle3escape","path":"sprites/bg_castle3escape/bg_castle3escape.yy",},},
     {"id":{"name":"bg_castle3","path":"sprites/bg_castle3/bg_castle3.yy",},},
     {"id":{"name":"bg_castle2","path":"sprites/bg_castle2/bg_castle2.yy",},},

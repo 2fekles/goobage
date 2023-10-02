@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_medievalcomputer",
-    "path": "sprites/spr_medievalcomputer/spr_medievalcomputer.yy",
+    "name": "spr_entrancegate",
+    "path": "sprites/spr_entrancegate/spr_entrancegate.yy",
   },
   "spriteMaskId": null,
   "visible": true,

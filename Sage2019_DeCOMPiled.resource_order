@@ -1628,6 +1628,7 @@
     {"name":"tile_stairs","order":1082,"path":"sprites/tile_stairs/tile_stairs.yy",},
     {"name":"bg_castle4","order":1083,"path":"sprites/bg_castle4/bg_castle4.yy",},
     {"name":"bg_castle4escape","order":1084,"path":"sprites/bg_castle4escape/bg_castle4escape.yy",},
+    {"name":"spr_entrancegate","order":1276,"path":"sprites/spr_entrancegate/spr_entrancegate.yy",},
     {"name":"bg_castle3escape","order":1085,"path":"sprites/bg_castle3escape/bg_castle3escape.yy",},
     {"name":"bg_castle3","order":1086,"path":"sprites/bg_castle3/bg_castle3.yy",},
     {"name":"bg_castle2","order":1087,"path":"sprites/bg_castle2/bg_castle2.yy",},

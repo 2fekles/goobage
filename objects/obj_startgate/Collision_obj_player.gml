@@ -7,8 +7,10 @@ with (obj_player1)
         backtohubstarty = y
         backtohubroom = room
         mach2 = 0
+		
         obj_camera.chargecamera = 0
         image_index = 0
+		sprite_index = spr_player_entergate
         state = 63
     }
 }
