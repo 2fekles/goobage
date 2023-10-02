@@ -19,10 +19,20 @@ function scr_player_freefallland()
 	{
 	    state = 57
         if key_jump2
+		{
             vsp = -14         
+			jumpAnim = 1
+			image_index = 0
+			sprite_index = spr_player_groundpoundjump
+		}
 else
+{
+	if key_down2
+	{
             vsp = -8
             sprite_index = spr_player_machfreefall
+	}
+}
         
         jumpstop = 1
 	}

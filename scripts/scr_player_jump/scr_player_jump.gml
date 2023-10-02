@@ -94,7 +94,11 @@ function scr_player_jump()
 	            sprite_index = spr_airdash2
 	        if (sprite_index == spr_shotgun_jump)
 	            sprite_index = spr_shotgun_fall
+				if sprite_index = spr_player_grabtwirl
+				sprite_index = spr_fall
 	        if (sprite_index == spr_jump)
+	            sprite_index = spr_fall
+				 if (sprite_index == spr_player_groundpoundjump)
 	            sprite_index = spr_fall
 	        if (sprite_index == spr_player_Sjumpstart)
 	            sprite_index = spr_player_Sjump

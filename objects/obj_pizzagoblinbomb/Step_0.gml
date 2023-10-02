@@ -13,17 +13,10 @@ switch state
 {
     case (0 << 0):
         hsp = (movespeed * image_xscale)
-        if (place_meeting((x + hsp), y, obj_solid) && (!(place_meeting((x + hsp), y, obj_ratblock))))
+		if (place_meeting((x + hsp), y, obj_solid) && (!(place_meeting((x + hsp), y, obj_ratblock))))
             image_xscale *= -1
         if (place_meeting((x + hsp), y, obj_ratblock) || place_meeting(x, (y + vsp), obj_ratblock))
-		{
             instance_destroy()
-			instance_create(x, y, obj_bombexplosion)
-			with place_meeting((x + hsp), y, obj_ratblock)
-			{
-				instance_destroy()
-			}
-		}
         if (scr_solid((x + 1), y) || scr_solid((x - 1), y))
             drop = 1
         if grounded
@@ -34,7 +27,7 @@ switch state
 
         if (vsp < 12)
             vsp += grav
-        scr_collide()
+        scr_collision()
         break
     case (4 << 0):
 	grounded = 0
@@ -48,7 +41,6 @@ switch state
             if playerid.grounded
                 instance_destroy()
         }
-        break
         break
     default:
         state = (0 << 0)
