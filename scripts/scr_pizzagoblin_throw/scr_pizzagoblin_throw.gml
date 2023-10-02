@@ -53,8 +53,9 @@ function scr_pizzagoblin_throw() //gml_Script_scr_pizzagoblin_throw
             case obj_pizzagoblin:
                 with (instance_create(x, y, obj_pizzagoblinbomb))
                 {
-                    hsp = (other.image_xscale * 10)
+                    movespeed = (other.image_xscale * 5)
                     vsp = -8
+					state = (0 << 0)
                 }
                 break
             case obj_cheeserobot:

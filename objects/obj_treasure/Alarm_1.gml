@@ -6,7 +6,7 @@ create_collect(obj_player.x, obj_player.y, choose(spr_shroomcollect, spr_tomatoc
 scr_soundeffect_pitched(sfx_collecttopping,irandom_range(9,12) / 10)
 time++
 
-alarm[1] = 0.5
+alarm[1] = 1
 }
 
 

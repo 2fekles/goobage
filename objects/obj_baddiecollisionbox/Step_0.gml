@@ -39,7 +39,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player1) && obj_player1
 				}
 				global.style += (2 + global.combo)
                 scr_soundeffect(sfx_punch)
-				
+				scr_soundeffect(sfx_killingblow)
                 instance_destroy(other.baddieID)
                 instance_destroy(other.id)
 				
@@ -88,8 +88,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player1) && obj_player1
             if (instance_exists(other.baddieID) && other.baddieID.state != 95 && other.baddieID.vsp > 0 && state != 56 && state != 42 && state != 70 && state != 73 && state != 69 && state != 21)
             {
                 scr_soundeffect(sfx_bumpwall)
-                if (state != 26 && state != 68)
-                    movespeed = 0
+                
                 if (other.baddieID.object_index == obj_pizzaball)
                     global.golfhit += 1
                 if (other.baddieID.stunned < 100)

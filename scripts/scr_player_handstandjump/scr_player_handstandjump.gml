@@ -17,7 +17,17 @@ function scr_player_handstandjump()
 	        jumpstop = 1
 	    }
 	    if (move != xscale && move != 0)
+		{
+		if grounded
 	        state = 0
+			else{
+				state = 57
+				jumpAnim = 1
+				image_index = 0
+				
+				sprite_index = spr_player_grabtwirl
+			}
+		}
 	    if ((floor(image_index) == (image_number - 1) || sprite_index == spr_player_suplexgrabjump || sprite_index == spr_player_suplexgrabjumpstart) && grounded && (!key_attack) && vsp > 0)
 	    {
 	        image_speed = 0.35

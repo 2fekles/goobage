@@ -13,7 +13,7 @@ switch state
 {
     case (0 << 0):
         hsp = (movespeed * image_xscale)
-        if (place_meeting((x + hsp), y, obj_solid) && (!(place_meeting((x + hsp), y, obj_ratblock))))
+		if (place_meeting((x + hsp), y, obj_solid) && (!(place_meeting((x + hsp), y, obj_ratblock))))
             image_xscale *= -1
         if (place_meeting((x + hsp), y, obj_ratblock) || place_meeting(x, (y + vsp), obj_ratblock))
             instance_destroy()
@@ -27,9 +27,20 @@ switch state
 
         if (vsp < 12)
             vsp += grav
-        scr_collide()
+        scr_collision()
         break
     case (4 << 0):
+	grounded = 0
+        x = playerid.x
+        y = (playerid.y - 40)
+        image_xscale = playerid.xscale
+        if (playerid.state != -2 && playerid.state != 42)
+            state = (0 << 0)
+        if (playerid.state == 42)
+        {
+            if playerid.grounded
+                instance_destroy()
+        }
         break
     default:
         state = (0 << 0)

@@ -17,5 +17,5 @@ movespeed = 0
 defused = 0
 destroy = 1
 grabbable = 1
-bomblit_spr = 1751
+bomblit_spr = spr_bomblit
 elite = 0

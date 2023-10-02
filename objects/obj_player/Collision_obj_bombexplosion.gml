@@ -18,10 +18,5 @@ if (hurted == 0 && cutscene == 0 && state != 26 && sprite_index != spr_bombpep_e
         if (x != other.x)
             obj_player.hsp = (sign((x - other.x)) * 5)
     }
-    image_index = 0
-    hurted = 1
-    vsp = -4
-    sprite_index = spr_bombpepend
-    state = 26
-    bombpeptimer = 0
+    hurt_player(self)
 }
