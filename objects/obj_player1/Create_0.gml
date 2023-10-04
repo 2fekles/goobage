@@ -19,9 +19,11 @@ global.escaperoom = ds_list_create()
     global.option_music_volume = ini_read_real("Option", "music_volume", 1)
     global.option_sfx_volume = ini_read_real("Option", "sfx_volume", 1)
 	ini_close()
+	
 	set_master_gain(global.option_master_volume)
 	global.bigfont = font_add_sprite_ext(spr_font, "ABCDEFGHIJKLMNOPQRSTUVWXYZ!.1234567890:", 1, 0)
 global.stylethreshold = 0
+global.roomnamefont = font_add_sprite_ext(spr_smallfont, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!,.:0123456789'?-", 1, 0)
 global.stylemultiplier = 0
 global.heattime = 1
 global.tutorialfont = __scribble_font_add_sprite_ext(spr_tutorialfont, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!,.:0123456789'?-", 1, 2)
