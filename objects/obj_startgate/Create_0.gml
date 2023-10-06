@@ -4,3 +4,4 @@ bgalpha3 = 1
 bgalpha4 = 1
 level = "none"
 targetDoor = "A"
+drawing = 0
