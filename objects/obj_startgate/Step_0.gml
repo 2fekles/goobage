@@ -6,4 +6,4 @@ else
     image_speed = 0
     image_index = 0
 }
-
+drawing = place_meeting(x, y, obj_player1)
