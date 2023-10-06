@@ -53,18 +53,10 @@ if (instance_exists(obj_player1) && obj_player1.state != 35 && obj_player1.state
 cy = target.y
     if (obj_player1.state == 89 || obj_player1.state == 36)
     {
-        if (chargecamera > (obj_player1.xscale * 100))
-            chargecamera -= 2
-        if (chargecamera < (obj_player1.xscale * 100))
-            chargecamera += 2
         __view_set(0, 0, ((cx - (__view_get(2, 0) / 2)) + chargecamera))
     }
     else
     {
-        if (chargecamera > 0)
-            chargecamera -= 2
-        if (chargecamera < 0)
-            chargecamera += 2
         __view_set(0, 0, ((cx - (__view_get(2, 0) / 2)) + chargecamera))
     }
     __view_set(0, 0, clamp(__view_get(0, 0), 0, (room_width - __view_get(2, 0))))
