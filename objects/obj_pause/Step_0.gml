@@ -26,51 +26,31 @@ if (pause == 1)
     if (key_jump && selected == 1)
     {
         var roomname = room_get_name(room)
-        if (global.snickchallenge == 0)
-        {
-            if (string_letters(roomname) == "medieval" || string_letters(roomname) == "medievalsecret")
-            {
-                instance_activate_all()
-                room = medieval_1
-                scr_playerreset()
-                pause = 0
-                obj_player1.targetDoor = "A"
-            }
-            else if (string_letters(roomname) == "ruin" || string_letters(roomname) == "ruinsecret")
-            {
-                instance_activate_all()
-                room = ruin_1
-                scr_playerreset()
-                pause = 0
-                obj_player1.targetDoor = "A"
-            }
-            else if (string_letters(roomname) == "dungeon" || string_letters(roomname) == "dungeonsecret")
-            {
-                instance_activate_all()
-                room = dungeon_1
-                scr_playerreset()
-                pause = 0
-                obj_player1.targetDoor = "A"
-            }
-            else
+                if (!global.snickchallenge)
+                {
+                    var rm = -4
+                    rm = global.leveltorestart
+                    ds_list_clear(global.saveroom)
+                    ds_list_clear(global.baddieroom)
+                    if (rm != -4 && rm != -1)
+                    {
+                        instance_activate_all()
+                        global.levelreset = 0
+                        scr_playerreset()
+                        global.levelreset = 1
+                        room_goto(rm)
+                        pause = 0
+                        obj_player1.targetDoor = "A"
+                        if instance_exists(obj_player2)
+                            obj_player2.targetDoor = "A"
+                        obj_camera.wave = 0
+                        obj_camera.alarm[6] = -1
+                    }
+                    else
+                        scr_soundeffect(sfx_enemyprojectile)
                 scr_soundeffect(sfx_enemyprojectile)
         }
-        else if (global.snickchallenge == 1)
-        {
-            instance_activate_all()
-            room = medieval_1
-            scr_playerreset()
-            global.collect = 10000
-            global.seconds = 59
-            global.minutes = 9
-            global.wave = 0
-            global.maxwave = (((global.minutes * 60) + global.seconds) * 60)
-            if global.panicbg
-                scr_panicbg_init()
-            obj_player1.targetDoor = "A"
-            global.snickchallenge = 1
-            pause = 0
-        }
+        
     }
     if (key_jump2 && selected == 2)
     {
@@ -84,6 +64,7 @@ if (pause == 1)
                 character = "P"
                 scr_characterspr()
             }
+			 global.leveltorestart = -4
             scr_playerreset()
             obj_player.state = 7
             global.cowboyhat = 0
@@ -91,6 +72,7 @@ if (pause == 1)
         }
         else
         {
+			 global.leveltorestart = -4
             pause = 0
             instance_activate_all()
             scr_playerreset()
