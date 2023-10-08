@@ -27,6 +27,7 @@ global.stylethreshold = 0
 global.roomnamefont = font_add_sprite_ext(spr_smallfont, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!,.:0123456789'?-", 1, 0)
 global.stylemultiplier = 0
 global.heattime = 1
+global.combofont = font_add_sprite_ext(spr_font_combo, "0123456789/", 1, 0)
 global.tutorialfont = __scribble_font_add_sprite_ext(spr_tutorialfont, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!,.:0123456789'?-", 1, 2)
 global.buttonfont = __scribble_font_add_sprite_ext(spr_buttonfont, "ABCDEFGHIJKLMNOPQRSTUVWXYZ&()*$%", 1, 1)
 global.baddiespeed = 1

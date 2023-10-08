@@ -23,6 +23,7 @@ combofill_x = 0
 combofill_y = 0
 combofill_index = 0
 visualcombo = 0
+comboalpha = 0
 collect_shake = 0
 global.hurtcounter = 0
 global.hurtmilestone = 3
