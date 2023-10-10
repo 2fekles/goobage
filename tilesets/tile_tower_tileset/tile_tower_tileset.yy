@@ -21,8 +21,8 @@
   },
   "spriteNoExport": false,
   "textureGroupId": {
-    "name": "texture_tilesets",
-    "path": "texturegroups/texture_tilesets",
+    "name": "Default",
+    "path": "texturegroups/Default",
   },
   "tile_count": 100,
   "tileAnimation": {

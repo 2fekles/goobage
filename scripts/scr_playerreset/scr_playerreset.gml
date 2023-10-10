@@ -46,6 +46,8 @@ global.baddierage = 0
         ds_list_clear(global.baddieroom)
 	with (obj_player1)
 	{
+		scale_xs = 1
+scale_ys = 1
 	    alarm[0] = -1
 	    alarm[1] = -1
 	    alarm[3] = -1

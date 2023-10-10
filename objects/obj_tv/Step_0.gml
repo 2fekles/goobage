@@ -143,52 +143,9 @@ else if (!((room == rank_room || room == timesuproom || room == boss_room1 || ro
     alpha = 1
 	if (global.combotime > 0 && global.combo > 0)
     visualcombo = global.combo
-combo_posX = Wave(-5, 5, 2, 20)
-if (global.combotime > 0 && global.combo != 0)
+if global.combo != 0
 {
-    switch combo_state
-    {
-        case 0:
-            combo_posY += combo_vsp
-            combo_vsp += 0.5
-            if (combo_posY > 24)
-                combo_state++
-            break
-        case 1:
-            combo_posY = lerp(combo_posY, 0, 0.05)
-            if (combo_posY < 1)
-            {
-                combo_posY = 0
-                combo_vsp = 0
-                combo_state++
-            }
-            break
-        case 2:
-            if (global.combotime < 30)
-            {
-                combo_posY += combo_vsp
-                if (combo_vsp < 24)
-                    combo_vsp += 0.5
-                if (combo_posY > 0)
-                {
-                    combo_posY = 0
-                    combo_vsp = -1
-                    if (global.combotime < 15)
-                        combo_vsp = -2
-                }
-            }
-            else
-                combo_posY = Approach(combo_posY, 0, 10)
-            break
-    }
-
+	comboalpha = Approach(comboalpha,1,0.1)
 }
 else
-{
-    combo_posY = Approach(combo_posY, -500, 5)
-    combo_vsp = 0
-    combo_state = 0
-}
-combofill_index += 0.35
-if (combofill_index > (sprite_get_number(spr_tv_combobubblefill) - 1))
-    combofill_index = frac(combofill_index)
+comboalpha = Approach(comboalpha,0,0.015)

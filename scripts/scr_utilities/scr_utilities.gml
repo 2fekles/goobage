@@ -1,15 +1,15 @@
 function scr_savescore(argument0) //gml_Script_scr_savescore
 {
 	
-    if ((global.collect + global.collectN) >= global.srank)
+    if (global.collect >= global.srank)
     {
         global.rank = "s"
     }
-    else if ((global.collect + global.collectN) > global.arank)
+    else if (global.collect  > global.arank)
         global.rank = "a"
-    else if ((global.collect + global.collectN) > global.brank)
+    else if (global.collect > global.brank)
         global.rank = "b"
-    else if ((global.collect + global.collectN) > global.crank)
+    else if (global.collect > global.crank)
         global.rank = "c"
     else
         global.rank = "d"
