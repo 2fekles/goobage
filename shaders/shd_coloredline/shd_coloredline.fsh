@@ -3,8 +3,30 @@
 //
 varying vec2 v_vTexcoord;
 varying vec4 v_vColour;
+uniform vec4 color1;
+uniform vec4 color2;
+uniform vec2 alpha;
 
 void main()
 {
-    gl_FragColor = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord );
+	vec4 source = v_vColour * texture2D(gm_BaseTexture, v_vTexcoord);
+	vec4 color = vec4(0, 0, 0, 0);
+	vec4 black = color1;
+	vec4 brown = color2;
+	black = black / vec4(255, 255, 255, 255);
+	brown = brown / vec4(255, 255, 255, 255);
+	
+	black.a = source.a;
+	brown.a = source.a;
+	
+	if (distance(source, vec4(0, 0, 0, alpha)) <= 0.1)
+		color = black;
+	else
+		color = brown;
+	
+	gl_FragColor.rgb = vec3(color.r, color.g, color.b);
+	gl_FragColor.a = source.a;
+	
+	if (distance(vec4(0, 0, 0, source.a), vec4(0, 0, 0, 0)) <= 0.004)
+		gl_FragColor = source;
 }

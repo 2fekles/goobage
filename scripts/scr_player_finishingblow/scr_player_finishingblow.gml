@@ -7,7 +7,7 @@ function scr_player_finishingblow()
 		afterima--
 		else
 		{
-			afterima = 3
+			afterima = 5
 			with (instance_create(x, y, obj_mach3effect))
             {
                 blue = 1
