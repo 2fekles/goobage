@@ -1020,6 +1020,7 @@
     {"name":"spr_player_suplexmash1","order":390,"path":"sprites/spr_player_suplexmash1/spr_player_suplexmash1.yy",},
     {"name":"spr_player_suplexdash","order":391,"path":"sprites/spr_player_suplexdash/spr_player_suplexdash.yy",},
     {"name":"spr_player_slaprun1","order":392,"path":"sprites/spr_player_slaprun1/spr_player_slaprun1.yy",},
+    {"name":"shd_coloredline","order":1,"path":"shaders/shd_coloredline/shd_coloredline.yy",},
     {"name":"spr_player_slaprun2","order":393,"path":"sprites/spr_player_slaprun2/spr_player_slaprun2.yy",},
     {"name":"spr_player_slap2air","order":394,"path":"sprites/spr_player_slap2air/spr_player_slap2air.yy",},
     {"name":"spr_player_slap1air","order":395,"path":"sprites/spr_player_slap1air/spr_player_slap1air.yy",},

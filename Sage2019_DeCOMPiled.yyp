@@ -1492,6 +1492,7 @@
     {"id":{"name":"spr_player_suplexmash1","path":"sprites/spr_player_suplexmash1/spr_player_suplexmash1.yy",},},
     {"id":{"name":"spr_player_suplexdash","path":"sprites/spr_player_suplexdash/spr_player_suplexdash.yy",},},
     {"id":{"name":"spr_player_slaprun1","path":"sprites/spr_player_slaprun1/spr_player_slaprun1.yy",},},
+    {"id":{"name":"shd_coloredline","path":"shaders/shd_coloredline/shd_coloredline.yy",},},
     {"id":{"name":"spr_player_slaprun2","path":"sprites/spr_player_slaprun2/spr_player_slaprun2.yy",},},
     {"id":{"name":"spr_player_slap2air","path":"sprites/spr_player_slap2air/spr_player_slap2air.yy",},},
     {"id":{"name":"spr_player_slap1air","path":"sprites/spr_player_slap1air/spr_player_slap1air.yy",},},
