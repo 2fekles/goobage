@@ -162,6 +162,8 @@ function scr_player_mach3()
 	    instance_create(x, y, obj_crazyrunothereffect)
 	    if (!instance_exists(obj_crazyruneffect))
 	        instance_create(x, y, obj_crazyruneffect)
+			if movespeed < 6
+	    movespeed = 6
 	    suplexmove = 1
 	    scr_soundeffect(sfx_suplexdash)
 	    state = 21
@@ -171,7 +173,6 @@ function scr_player_mach3()
 	    image_index = 0
 	    
 	        sprite_index = !grounded ? spr_player_suplexgrabjumpstart : spr_player_suplexdash
-	    if movespeed < 6
-	    movespeed = 6
+	    
 	}
 }

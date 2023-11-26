@@ -252,6 +252,7 @@ function scr_player_normal()
 	        instance_create(x, y, obj_crazyruneffect)
 			if !instance_exists(obj_crazyrunothereffect)
 	    instance_create(x, y, obj_crazyrunothereffect)
+		movespeed = 6
 	    suplexmove = 1
 	    scr_soundeffect(sfx_suplexdash)
 	    state = 21
@@ -263,7 +264,7 @@ function scr_player_normal()
 	        sprite_index = spr_player_suplexdash
 	    else
 	        sprite_index = spr_shotgun_suplexdash
-	    movespeed = 6
+	    
 	}
 	if (key_slap2 && character == "P" && shotgunAnim == 1 && key_up)
 	{

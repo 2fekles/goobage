@@ -6,7 +6,7 @@ global.showcollisions = false
 bombgrabID = -4
 scr_initinput()
 scr_collision_init()
-// Save Stuff - Gooobrr
+// Save Stuff - Vanni
 if (!variable_global_exists("saveroom"))
 {
 global.saveroom = ds_list_create()
