@@ -13,4 +13,4 @@ secret = 0
 secretend = 0
 pillar_on_camera = 0
 prevpillar_on_camera = 0
-room_arr = [[Realtitlescreen,mu_title,mu_secret,0],[hub_room1,mu_hub,mu_secret,0],[medieval_1,mu_medievalentrance,mu_secret,0],[medieval_3,mu_medievalremix,mu_secret,0],[medieval_5,mu_medieval,mu_secret,0],[ruin_1,mu_ruin,mu_secret,0],[ruin_7,mu_ruinremix,mu_secret,0],[dungeon_1,mu_dungeon,mu_secret,0],[dungeon_9,mu_dungeondepth,mu_secret,0]]
+room_arr = [[Realtitlescreen,mu_title,mu_secret,0],[tower_1,mu_hub,mu_secret,0],[medieval_1,mu_medievalentrance,mu_secret,0],[medieval_3,mu_medievalremix,mu_secret,0],[medieval_5,mu_medieval,mu_secret,0],[ruin_1,mu_ruin,mu_secret,0],[ruin_7,mu_ruinremix,mu_secret,0],[dungeon_1,mu_dungeon,mu_secret,0],[dungeon_9,mu_dungeondepth,mu_secret,0]]

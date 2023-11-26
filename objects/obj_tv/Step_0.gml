@@ -85,7 +85,7 @@ switch sprite_index
 			break
 			
 		}
-if (room == rank_room || room == timesuproom || room == boss_room1 || room == Realtitlescreen)
+if (room == rank_room || room == timesuproom  || room == Realtitlescreen)
     alpha = 0
 if (room == entrance_1)
 {
@@ -139,7 +139,7 @@ if (!((obj_player.state == 23 && obj_player.state == 24 && obj_player.state == 1
     once = 0
 if (obj_player.y < 200 && obj_player.x > (room_width - 200))
     alpha = 0.5
-else if (!((room == rank_room || room == timesuproom || room == boss_room1 || room == Realtitlescreen)))
+else 
     alpha = 1
 	if (global.combotime > 0 && global.combo > 0)
     visualcombo = global.combo

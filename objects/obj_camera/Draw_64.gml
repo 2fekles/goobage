@@ -10,7 +10,7 @@ pizzascore_index += (0 + (0.25 * global.stylethreshold))
         else
             pizzascore_index = 0
     }
-    var _numfont = font_add_sprite_ext(spr_font_collect, "0123456789", 1, 0)
+    
 	var sw = sprite_get_width(spr_heatmeter_fill)
     var sh = sprite_get_height(spr_heatmeter_fill)
     var b = global.stylemultiplier
@@ -33,7 +33,7 @@ pizzascore_index += (0 + (0.25 * global.stylethreshold))
         draw_sprite_ext(spr_pizzascore_shroom, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
     draw_set_valign(fa_top)
     draw_set_halign(fa_left)
-    draw_set_font(_numfont)
+    draw_set_font(numfont)
     var text_y = 0
     switch floor(pizzascore_index)
     {
@@ -81,7 +81,7 @@ pizzascore_index += (0 + (0.25 * global.stylethreshold))
     }
     draw_set_alpha(1)
     shader_reset()
-    font = font_add_sprite_ext(spr_font, "ABCDEFGHIJKLMNOPQRSTUVWXYZ!.1234567890:", 1, 0)
+    
     draw_set_font(font)
     draw_set_halign(fa_center)
     draw_set_color(c_white)
