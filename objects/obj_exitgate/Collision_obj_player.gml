@@ -1,5 +1,6 @@
-if obj_player.state == 60 && floor(image_index) == (image_number - 2)
+if obj_player.state == 60 && floor(obj_player.image_index) == (obj_player.image_number - 2) && image_index == 1 && global.panic == 0
 {
+	scr_soundeffect(sfx_groundpound)
     ds_list_add(global.saveroom, id)
     image_index = 0
     with (obj_camera)
@@ -9,6 +10,8 @@ if obj_player.state == 60 && floor(image_index) == (image_number - 2)
     }
     obj_player.image_index = 0
     obj_player.sprite_index = obj_player.spr_Timesup
+	image_index = 0
+            ds_list_add(global.saveroom, id)
 }
 with (obj_player)
 {

@@ -1,2 +1,2 @@
-targetRoom = hub_room1
+targetRoom = tower_1
 visible = false

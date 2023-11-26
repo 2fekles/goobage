@@ -35,7 +35,5 @@ if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == 0)
             global.seconds = 30
             break
     }
-
-   
     ds_list_add(global.saveroom, id)
 }
