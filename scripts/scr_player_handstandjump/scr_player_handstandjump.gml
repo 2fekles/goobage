@@ -7,10 +7,9 @@ function scr_player_handstandjump()
 	    move = (key_left + key_right)
 	    momemtum = 1
 	    dir = xscale
-	    if (movespeed < 10 && grounded)
+	    if (movespeed < 10)
 	        movespeed += 0.5
-	    else if (!grounded)
-	        movespeed = 10
+	    
 	    if ((!key_jump2) && jumpstop == 0 && vsp < 0.5 && stompAnim == 0)
 	    {
 	        vsp /= 10
