@@ -5,6 +5,8 @@ function scr_player_mach2()
 	    if (windingAnim < 2000)
 	        windingAnim++
 	}
+	if (scr_slope() && hsp != 0 && grounded)
+            scr_player_addslopemomentum(0.1, 0.2)
 	hsp = (xscale * movespeed)
 	if ((!(place_meeting(x, (y + 1), obj_railh))) && (!(place_meeting(x, (y + 1), obj_railh2))))
 	    hsp = (xscale * movespeed)
@@ -143,10 +145,10 @@ function scr_player_mach2()
 	}
 	if (move == xscale && (!key_attack) && grounded && character == "P")
 	    state = 0
-	if (sprite_index == spr_player_rollgetup)
-	    image_speed = 0.4
-	else if sprite_index != spr_player_longjump
-	    image_speed = 0.65
+	if (sprite_index == spr_player_rollgetup || sprite_index == spr_suplexdash)
+        image_speed = 0.4
+    else if sprite_index != spr_player_longjump
+        image_speed = (abs(movespeed) / 15)
 		else if sprite_index = spr_player_longjump && floor(image_index) == (image_number - 1)
 		image_speed = 0
 		if (key_slap2 && character == "P" && suplexmove == 0 && (!((shotgunAnim == 1 && key_up))))

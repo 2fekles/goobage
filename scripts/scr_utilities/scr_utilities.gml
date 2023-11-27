@@ -39,7 +39,43 @@ function scr_savescore(argument0) //gml_Script_scr_savescore
     ini_write_string("Ranks", argument0, global.rank)
     ini_close()
 }
-
+function scr_player_addslopemomentum(argument0, argument1) //gml_Script_scr_player_addslopemomentum
+{
+	if instance_place(x, (y + 1), obj_slope)
+	{
+    with (instance_place(x, (y + 1), obj_slope))
+    {
+        if (sign(image_xscale) == (-sign(other.xscale)))
+        {
+            if (abs(image_yscale) < abs(image_xscale))
+                other.movespeed += argument0
+            else
+                other.movespeed += argument1
+        }
+        else if (abs(image_yscale) < abs(image_xscale))
+            other.movespeed -= argument0
+        else
+            other.movespeed -= argument1
+    }
+	}
+	else if instance_place(x, (y + 1), obj_slopePlatform)
+	{
+	with (instance_place(x, (y + 1), obj_slopePlatform))
+    {
+        if (sign(image_xscale) == (-sign(other.xscale)))
+        {
+            if (abs(image_yscale) < abs(image_xscale))
+                other.movespeed += argument0
+            else
+                other.movespeed += argument1
+        }
+        else if (abs(image_yscale) < abs(image_xscale))
+            other.movespeed -= argument0
+        else
+            other.movespeed -= argument1
+    }
+	}
+}
 
 function hurt_player(argument0)
 {
@@ -541,23 +577,6 @@ function scr_initenemy()
     ventilator_vsp = -5
     linethrown = 0
     dashcloudid = 523
-}
-function scr_player_addslopemomentum(argument0, argument1) //gml_Script_scr_player_addslopemomentum
-{
-    with (instance_place(x, (y + 1), obj_slope))
-    {
-        if (sign(image_xscale) == (-sign(other.xscale)))
-        {
-            if (abs(image_yscale) < abs(image_xscale))
-                other.movespeed += argument0
-            else
-                other.movespeed += argument1
-        }
-        else if (abs(image_yscale) < abs(image_xscale))
-            other.movespeed -= argument0
-        else
-            other.movespeed -= argument1
-    }
 }
 function scr_heatup() 
 {

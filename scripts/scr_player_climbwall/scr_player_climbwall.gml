@@ -22,26 +22,37 @@ function scr_player_climbwall()
 	    state = 91
 	    machhitAnim = 0
 	}
-	if (!(scr_solid((x + xscale), y)))
-	{
-	    instance_create(x, y, obj_jumpdust)
-	    vsp = 0
-	    movespeed = wallspeed
-	        state = 69
-	    
-	        sprite_index = spr_mach4
-	    
-	}
+	
+	if !scr_solid(x + xscale, y)
+            {
+                instance_create(x, y, obj_jumpdust)
+                vsp = 0
+                if (wallspeed < 6)
+                    wallspeed = 6
+                if ((wallspeed >= 6 && wallspeed < 12))
+                {
+                    state = 69
+                    movespeed = wallspeed
+                }
+                else if (wallspeed >= 12)
+                {
+                    state = 89
+                    sprite_index = spr_mach4
+                    movespeed = wallspeed
+                }
+            }
 	if key_jump
-	{
-	    movespeed = 8
-	    state = 69
-	    image_index = 0
-	    sprite_index = spr_walljumpstart
-	    vsp = -11
-	    xscale *= -1
-	    jumpstop = 0
-	}
+            {
+                movespeed = 10
+                state = 69
+                image_index = 0
+                sprite_index = spr_walljumpstart
+                
+                vsp = -11
+                xscale *= -1
+                jumpstop = 0
+                
+            }
 	if ((grounded && wallspeed <= 0) || wallspeed <= 0)
 	{
 	    state = 57
@@ -50,4 +61,5 @@ function scr_player_climbwall()
 	image_speed = 0.6
 	if (!instance_exists(obj_cloudeffect))
 	    instance_create(x, (y + 43), obj_cloudeffect)
+		
 }

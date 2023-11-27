@@ -1,10 +1,16 @@
 function scr_slope()
 {
 	y++;
+	var curslope = 0
 var slope = instance_place(x, y, obj_slope);
-if (slope)
+var slope2 = instance_place(x, y, obj_slopePlatform);
+if slope
+var curslope = slope
+else if slope2
+var curslope = slope2
+if (curslope)
 {
-	with (slope)
+	with (curslope)
 	{
 		var object_side = 0;
 		var slope_start = 0;
@@ -22,8 +28,8 @@ if (slope)
 			slope_end = bbox_bottom;
 		}
 		var m = (sign(image_xscale) * (bbox_bottom - bbox_top)) / (bbox_right - bbox_left);
-		slope = slope_start - round(m * (object_side - bbox_left));
-		if (other.bbox_bottom >= slope)
+		curslope = slope_start - round(m * (object_side - bbox_left));
+		if (other.bbox_bottom >= curslope)
 		{
 			other.y--;
 			return 1;
