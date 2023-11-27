@@ -62,6 +62,12 @@ if (kidsparty_lightning || dark_lightning)
             for (var i = 0; i < 2; i++)
             {
                 var _player = asset_get_index(concat("obj_player", (i + 1)))
+				draw_set_alpha(circle_alpha_out * 2)
+                with (_player)
+                {
+                    if (state != (186 << 0))
+                        draw_circle(((x - surf_x) + irandom_range(-1, 1)), ((y - surf_y) + irandom_range(-1, 1)), 318, 0)
+                }
                 draw_set_alpha(circle_alpha_out)
                 with (_player)
                 {
@@ -74,6 +80,7 @@ if (kidsparty_lightning || dark_lightning)
                     if (state != (186 << 0))
                         draw_circle(((x - surf_x) + irandom_range(-1, 1)), ((y - surf_y) + irandom_range(-1, 1)), 258, 0)
                 }
+				
             }
             gpu_set_blendmode(bm_normal)
             draw_set_alpha(1)

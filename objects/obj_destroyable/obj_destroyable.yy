@@ -37,8 +37,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_destroyable",
-    "path": "sprites/spr_destroyable/spr_destroyable.yy",
+    "name": "spr_doughblock",
+    "path": "sprites/spr_doughblock/spr_doughblock.yy",
   },
   "spriteMaskId": null,
   "visible": true,

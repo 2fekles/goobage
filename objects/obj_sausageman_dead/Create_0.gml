@@ -1,5 +1,5 @@
-vsp = random_range(-5, -10)
-hsp = (sign((x - obj_player.x)) * random_range(5, 10))
+vsp = random_range(-10, -18)
+hsp = (sign((x - obj_player.x)) * random_range(10, 18))
 grav = 0.4
 alarm[0] = 5
 cigar = 0

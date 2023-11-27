@@ -5,7 +5,8 @@ function scr_player_mach3()
 	    if (windingAnim < 2000)
 	        windingAnim++
 	}
-	
+	if (scr_slope() && hsp != 0 && grounded)
+            scr_player_addslopemomentum(0.1, 0.2)
 	if ((!(place_meeting(x, (y + 1), obj_railh))) && (!(place_meeting(x, (y + 1), obj_railh2))))
 	    hsp = (xscale * movespeed)
 	else if place_meeting(x, (y + 1), obj_railh)
