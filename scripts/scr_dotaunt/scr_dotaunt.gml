@@ -1,7 +1,7 @@
 
 function scr_dotaunt()
 {
-fmod_soundeffect("event:/sfx/pep/taunt",x,y)
+		fmod_soundeffect("event:/sfx/pep/taunt",x,y)
 	    taunttimer = 20
 	    tauntstoredmovespeed = movespeed
 	    tauntstoredsprite = sprite_index

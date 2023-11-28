@@ -34,9 +34,7 @@ global.baddiespeed = 1
 global.baddiepowerup = 0
 global.baddierage = 0
 }
-enum states{
-	normal,
-}
+
 doublejump = 0
 knightmiddairstop = 0
 knightmomentum = 0
