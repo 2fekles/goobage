@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_entrancegate",
-    "path": "sprites/spr_entrancegate/spr_entrancegate.yy",
+    "name": "spr_gate_entrance",
+    "path": "sprites/spr_gate_entrance/spr_gate_entrance.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -76,8 +76,6 @@ function scr_player_mach2()
 	        movespeed += 0.1
 	    if (movespeed >= 12)
 	    {
-			if sprite_index != spr_player_rollgetup
-	        movespeed = 12
 	        machhitAnim = 0
 	        state = 89
 	        flash = 1
@@ -158,7 +156,7 @@ function scr_player_mach2()
 	    if (!instance_exists(obj_crazyruneffect))
 	        instance_create(x, y, obj_crazyruneffect)
 	    suplexmove = 1
-	    scr_soundeffect(sfx_suplexdash)
+	    fmod_soundeffect("event:/sfx/pep/suplexdash",x,y)
 	    state = 21
 		flash = 1
 		if ((!instance_exists(obj_superdashcloud)) && grounded)

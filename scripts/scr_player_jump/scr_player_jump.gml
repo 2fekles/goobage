@@ -193,7 +193,7 @@ function scr_player_jump()
 	    if (!instance_exists(obj_crazyruneffect))
 	        instance_create(x, y, obj_crazyruneffect)
 	    suplexmove = 1
-	    scr_soundeffect(sfx_suplexdash)
+	    fmod_soundeffect("event:/sfx/pep/suplexdash",x,y)
 	    state = 21
 		flash = 1
 		if ((!instance_exists(obj_superdashcloud)) && grounded)

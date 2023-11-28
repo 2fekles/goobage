@@ -4,7 +4,7 @@ if pause
     draw_set_alpha(1)
     scr_draw_pause_image()
     draw_set_alpha(whiteal)
-    draw_rectangle_color(0, 0, 960, 540, c_white, c_white, c_white, c_white, 0)
+    draw_rectangle_color(0, 0, 960, 540, c_black, c_black, c_black, c_black, 0)
     draw_set_alpha(1)
     draw_set_halign(fa_center)
     draw_set_valign(fa_middle)
