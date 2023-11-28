@@ -166,7 +166,7 @@ function scr_player_mach3()
 			if movespeed < 6
 	    movespeed = 6
 	    suplexmove = 1
-	    scr_soundeffect(sfx_suplexdash)
+	    fmod_soundeffect("event:/sfx/pep/suplexdash",x,y)
 	    state = 21
 		flash = 1
 		if ((!instance_exists(obj_superdashcloud)) && grounded)

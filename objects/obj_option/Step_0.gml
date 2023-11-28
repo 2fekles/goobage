@@ -84,7 +84,7 @@ if (optionselected == 3)
         }
     }
 }
-if ((key_slap2 || key_start) && (!instance_exists(obj_keyconfig)))
+if ((key_slap2 || key_start) && (!instance_exists(obj_keyconfig))&& (!instance_exists(obj_audioconfig)))
 {
     scr_soundeffect(sfx_enemyprojectile)
 	if instance_exists(obj_mainmenuselect)

@@ -43,3 +43,4 @@ global.crank = 0
 character = "PEPPINO"
 display_set_gui_size(960, 540)
 sprite = spr_tv_off
+combofont = font_add_sprite_ext(spr_tv_combobubbletext, "0123456789", 1, 0)
