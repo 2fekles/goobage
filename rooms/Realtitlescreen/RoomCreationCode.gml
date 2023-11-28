@@ -43,3 +43,12 @@ global.medievaltoppin3 = ini_read_string("Toppin", "medieval3", 0)
 global.medievaltoppin4 = ini_read_string("Toppin", "medieval4", 0)
 global.medievaltoppin5 = ini_read_string("Toppin", "medieval5", 0)
 ini_close()
+enum states{
+	//player
+	normal,
+	//pause
+	pause,
+	options,
+	audio,
+	key,
+}
