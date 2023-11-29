@@ -101,7 +101,7 @@ function hurt_player(argument0)
     }
     else if (state != 72 && hurted == 0 && cutscene == 0 && state != 71)
     {
-        scr_soundeffect(sfx_pephurt)
+        fmod_soundeffect("event:/sfx/pep/hurt",x,y)
         alarm[8] = 60
         alarm[7] = 120
         hurted = 1

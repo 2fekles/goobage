@@ -37,7 +37,7 @@ function scr_player_mach3()
 	    jumpstop = 0
 	if (input_buffer_jump < 8 && grounded && (!((move == 1 && xscale == -1))) && (!((move == -1 && xscale == 1))))
 	{
-	    scr_soundeffect(sfx_jump)
+	    fmod_soundeffect("event:/sfx/pep/jump",x,y)
 	    image_index = 0
 	    sprite_index = spr_mach3jump
 	    vsp = -11
@@ -65,8 +65,9 @@ function scr_player_mach3()
 	    image_speed = 0.4
 	if key_jump
 	    input_buffer_jump = 0
-	if key_up
+	if key_up && grounded
 	{
+		fmod_soundeffect("event:/sfx/pep/superjump",x,y)
 	    sprite_index = spr_superjumpprep
 	    state = 64
 	    hsp = 0

@@ -22,6 +22,7 @@ instance_destroy()
     {
         if (sprite_index == spr_player_rockethitwall)
         {
+			fmod_soundeffect("event:/sfx/pep/slipend",x,y)
             sprite_index = spr_player_slipbanan2
             image_index = 0
             image_speed = 0.35
@@ -29,7 +30,7 @@ instance_destroy()
         else
         {
             vsp = -6
-            scr_soundeffect(sfx_bumpwall)
+            fmod_soundeffect("event:/sfx/pep/slipbump",x,y)
             sprite_index = spr_player_rockethitwall
             instance_create(x, (y + 43), obj_bangeffect)
         }
@@ -41,7 +42,7 @@ instance_destroy()
     }
     if (scr_solid((x + xscale), y) && (!scr_slope()) && (scr_solid_slope((x + sign(hsp)), y) || place_meeting((x + sign(hsp)), y, obj_solid)) && (!(place_meeting((x + sign(hsp)), y, obj_destructibles))))
     {
-        scr_soundeffect(sfx_bumpwall)
+        scr_soundeffect(fmod_soundeffect("event:/sfx/pep/slipbump",x,y))
         sprite_index = spr_player_rockethitwall
         instance_create((x + 30), y, obj_bangeffect)
         xscale *= -1

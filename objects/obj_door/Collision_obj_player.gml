@@ -5,7 +5,7 @@ with (other.id)
         lastroom_x = other.x
         lastroom_y = other.y
         lastroom = room
-        scr_soundeffect(sfx_door)
+        fmod_soundeffect("event:/sfx/misc/door",x,y)
         obj_camera.chargecamera = 0
         ds_list_add(global.saveroom, id)
         obj_player1.sprite_index = obj_player1.spr_lookdoor

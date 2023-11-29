@@ -41,7 +41,7 @@ function scr_player_Sjump()
 	                vsp = -7
 	        }
 	    }
-	    scr_soundeffect(sfx_groundpound)
+	    fmod_soundeffect("event:/sfx/pep/groundpound",x,y)
 	    image_index = 0
 	    state = 91
 	    machhitAnim = 0
@@ -50,6 +50,7 @@ function scr_player_Sjump()
     {
         image_index = 0
         sprite_index = spr_player_Sjumpcancelstart
+		fmod_soundeffect("event:/sfx/pep/superjumpcancel",x,y)
     }
     if (sprite_index == spr_player_Sjumpcancelstart)
     {

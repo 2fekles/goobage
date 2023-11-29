@@ -7,7 +7,7 @@ switch state
 	scr_pause_options()
 	break
 }
-screenx2 = lerp(screenx2,screenx,0.25)
+screenx2 = lerp(screenx2,screenx,0.15)
 cx = lerp(cx, rcx, 0.1)
 cy = lerp(cy, rcy, 0.15)
 cursor_index += 0.35

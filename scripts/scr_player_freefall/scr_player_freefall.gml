@@ -44,7 +44,7 @@ function scr_player_freefall()
 	    instance_create(x, y, obj_superslameffect)
 	if (grounded && (!(input_buffer_jump < 8)) && (!(place_meeting(x, (y + 1), obj_destructibles))))
 	{
-	    scr_soundeffect(sfx_groundpound)
+	    fmod_soundeffect("event:/sfx/pep/groundpound",x,y)
 	    freefallsmash = 0
 	    if (shotgunAnim == 0)
 	        sprite_index = spr_bodyslamland

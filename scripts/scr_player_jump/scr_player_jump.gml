@@ -43,7 +43,7 @@ function scr_player_jump()
 	}
 	if (grounded && input_buffer_jump < 8 && (!key_down) && (!key_attack) && vsp > 0 && (!((sprite_index == spr_player_facestomp || sprite_index == spr_player_freefall))))
 	{
-	    scr_soundeffect(sfx_jump)
+	    fmod_soundeffect("event:/sfx/pep/jump",x,y)
 	    sprite_index = spr_jump
 	    if (shotgunAnim == 1)
 	        sprite_index = spr_shotgun_jump
@@ -59,7 +59,7 @@ function scr_player_jump()
 	}
 	if (grounded && vsp > 0 && (!key_attack))
 	{
-	    scr_soundeffect(sfx_step)
+	    fmod_soundeffect("event:/sfx/pep/step",x,y)
 	    if key_attack
 	        landAnim = 0
 	    input_buffer_secondjump = 0

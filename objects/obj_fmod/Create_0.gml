@@ -1,6 +1,5 @@
-show_debug_message("Created :  " + string(fmod_create()));
-show_debug_message("Initialized :  " + string(fmod_init(32)));
-
+fmod_create()
+fmod_init(256)
 var banks = 
 [
 "sound/Desktop/Master.strings.bank", 

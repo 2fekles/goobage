@@ -356,6 +356,18 @@ if (global.combotime > 0)
         global.heattime -= 0.15
 	if (global.heattime <= 0 && global.style > -1)
         global.style -= 0.05
+		if (global.combo != global.previouscombo)
+    {
+        global.previouscombo = global.combo
+		if ((global.combo % 5) == 0 && global.combo != 0)
+        {
+            with (instance_create(x, (y - 80), obj_combotitle))
+            {
+                title = floor((global.combo / 5))
+                title = clamp(title, 0, floor((sprite_get_number(spr_comboend_title1) / 5)))
+            }
+        }
+	}
 if (global.combotime == 0 && global.combo != 0)
     global.combo = 0
 if (input_buffer_jump < 8)
