@@ -9,7 +9,20 @@ screensprite = -4
 screensize = 0
 guisprite = -4
 gui_surf = -4
-pause_menu = ["RESUME", "OPTIONS", "RESTART LEVEL", "EXIT LEVEL"]
+pause_menu = 
+[
+"RESUME", 
+"OPTIONS", 
+"RESTART LEVEL", 
+"EXIT LEVEL"
+]
+option_menu = 
+[
+"VIDEO",
+"GAME",
+"INPUT",
+"AUDIO",
+]
 cursor_index = 0
 cursor_sprite_number = sprite_get_number(spr_cursor)
 cursor_sprite_height = sprite_get_height(spr_cursor)

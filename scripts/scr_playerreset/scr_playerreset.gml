@@ -8,6 +8,7 @@ function scr_playerreset()
 	global.secretfound = 0
 	global.hurtcounter = 0
 	global.snickchallenge = 0
+	global.previouscombo = 0
 	if instance_exists(obj_snickexe)
 	    instance_destroy(obj_snickexe)
 		scale_xs = 1

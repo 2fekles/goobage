@@ -1,6 +1,6 @@
 if (drop == 0)
 {
-	scr_soundeffect(sfx_bananaslip)
+fmod_soundeffect("event:/sfx/pep/slip",x,y)
     with (obj_player)
     {
         instance_destroy(other)

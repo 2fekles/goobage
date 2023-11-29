@@ -44,6 +44,7 @@ function scr_player_handstandjump()
 	    if (key_down && grounded && vsp > 0)
 	    {
 	        grav = 0.5
+			fmod_soundeffect("event:/sfx/pep/dive",x,y)
 	        sprite_index = spr_crouchslip
 	        if (character == "P")
 	            machhitAnim = 0
@@ -70,7 +71,7 @@ function scr_player_handstandjump()
 	    }
 	    if (scr_solid((x + 1), y) && xscale == 1 && (!(place_meeting((x + sign(hsp)), y, obj_slope))) && (!(place_meeting((x + xscale), y, obj_destructibles))))
 	    {
-	        scr_soundeffect(sfx_bumpwall)
+	        fmod_soundeffect("event:/sfx/pep/bumpwall",x,y)
 	        grav = 0.5
 	        movespeed = 0
 	        state = 71
@@ -84,7 +85,7 @@ function scr_player_handstandjump()
 	    }
 	    if (scr_solid((x - 1), y) && xscale == -1 && (!(place_meeting((x + sign(hsp)), y, obj_slope))) && (!(place_meeting((x + xscale), y, obj_destructibles))))
 	    {
-	        scr_soundeffect(sfx_bumpwall)
+	        fmod_soundeffect("event:/sfx/pep/bumpwall",x,y)
 	        grav = 0.5
 	        movespeed = 0
 	        state = 71

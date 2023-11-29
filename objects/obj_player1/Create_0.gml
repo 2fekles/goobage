@@ -88,6 +88,7 @@ global.keyget = 0
 global.collect = 0
 global.treasure = 0
 global.combo = 0
+global.previouscombo = 0
 global.combotime = 0
 global.pizzacoin = 0
 global.toppintotal = 1

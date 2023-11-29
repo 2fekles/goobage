@@ -187,7 +187,7 @@ function scr_player_normal()
 	}
 	if (key_jump && grounded && (!key_down))
 	{
-	    scr_soundeffect(sfx_jump)
+	    fmod_soundeffect("event:/sfx/pep/jump",x,y)
 	    sprite_index = spr_jump
 	    if (shotgunAnim == 1)
 	        sprite_index = spr_shotgun_jump
@@ -200,7 +200,7 @@ function scr_player_normal()
 	}
 	if (grounded && input_buffer_jump < 8 && (!key_down) && (!key_attack) && vsp > 0)
 	{
-	    scr_soundeffect(sfx_jump)
+	    fmod_soundeffect("event:/sfx/pep/jump",x,y)
 	    sprite_index = spr_jump
 	    if (shotgunAnim == 1)
 	        sprite_index = spr_shotgun_jump

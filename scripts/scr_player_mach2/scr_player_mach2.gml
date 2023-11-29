@@ -40,7 +40,7 @@ function scr_player_mach2()
 	{
 	    image_index = 0
 	    sprite_index = spr_secondjump1
-	    scr_soundeffect(sfx_jump)
+	    fmod_soundeffect("event:/sfx/pep/jump",x,y)
 	    vsp = -11
 	}
 	if (grounded && vsp > 0)
