@@ -211,3 +211,5 @@ global.SAGEtreasure = ini_read_string("SAGE2019", "treasure", 0)
 
 ini_close()
 stickpressed = 0
+//FMOD sounds
+superjumpsnd = fmod_createEventInstance("event:/sfx/pep/superjump")

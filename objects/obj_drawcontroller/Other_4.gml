@@ -7,10 +7,17 @@
         kidsparty_lightning = 0
         dark_lightning = 1
     }
+	else if roomname == "entrance"
+	{
+		kidsparty_lightning = 0
+        dark_lightning = 1
+		entrance_lighting = 1
+	}
     else
     {
         kidsparty_lightning = 0
         dark_lightning = 0
+		entrance_lighting = 0
     }
 
 

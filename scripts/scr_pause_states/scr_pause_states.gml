@@ -167,4 +167,16 @@ function scr_pause_options()
 				selected = 1
 				screenx = 0
 	}
+	if key_jump
+	{
+		switch selected
+		{
+			case 0:
+			fmod_soundeffect("event:/sfx/ui/select",x,y)
+                state = states.video
+				selected = 0
+				screenx = 960 * 2
+				break
+		}
+	}
 }
