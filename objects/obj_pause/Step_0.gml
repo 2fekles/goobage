@@ -6,6 +6,8 @@ switch state
 	case states.options:
 	scr_pause_options()
 	break
+	case states.video:
+	break
 }
 screenx2 = lerp(screenx2,screenx,0.15)
 cx = lerp(cx, rcx, 0.1)

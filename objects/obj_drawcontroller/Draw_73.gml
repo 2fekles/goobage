@@ -48,7 +48,7 @@ if (kidsparty_lightning || dark_lightning)
             draw_set_alpha(1)
         }
     }
-    else if dark_lightning
+    else if dark_lightning || entrance_lighting
     {
         if surface_exists(surf)
         {
@@ -61,21 +61,14 @@ if (kidsparty_lightning || dark_lightning)
             draw_set_color(c_white)
             for (var i = 0; i < 2; i++)
             {
-                var _player = asset_get_index(concat("obj_player", (i + 1)))
-				draw_set_alpha(circle_alpha_out * 2)
-                with (_player)
-                {
-                    if (state != (186 << 0))
-                        draw_circle(((x - surf_x) + irandom_range(-1, 1)), ((y - surf_y) + irandom_range(-1, 1)), 318, 0)
-                }
                 draw_set_alpha(circle_alpha_out)
-                with (_player)
+                with (obj_player)
                 {
                     if (state != (186 << 0))
                         draw_circle(((x - surf_x) + irandom_range(-1, 1)), ((y - surf_y) + irandom_range(-1, 1)), 298, 0)
                 }
                 draw_set_alpha(circle_alpha_in)
-                with (_player)
+                with (obj_player)
                 {
                     if (state != (186 << 0))
                         draw_circle(((x - surf_x) + irandom_range(-1, 1)), ((y - surf_y) + irandom_range(-1, 1)), 258, 0)
@@ -85,7 +78,7 @@ if (kidsparty_lightning || dark_lightning)
             gpu_set_blendmode(bm_normal)
             draw_set_alpha(1)
             surface_reset_target()
-            draw_surface(surf, surf_x, surf_y)
+			draw_surface(surf, surf_x, surf_y)
         }
     }
 }

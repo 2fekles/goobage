@@ -51,4 +51,5 @@ enum states{
 	options,
 	audio,
 	key,
+	video,
 }

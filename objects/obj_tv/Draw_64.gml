@@ -27,5 +27,26 @@ for (var i = num; i > 0; i--)
     _ty -= 8
 }
 draw_sprite_ext(sprite_index, image_index, 833 , (107 + hud_posY), 1, 1, 1, c_white, 1)
-    
+if (bubblespr != -4)
+    draw_sprite_ext(bubblespr, bubbleindex, 512, 53, 1, 1, 1, c_white, alpha)
+if (!surface_exists(promptsurface))
+    promptsurface = surface_create(290, 102)
+surface_set_target(promptsurface)
+draw_clear_alpha(c_black, 0)
+draw_set_font(font1)
+draw_set_halign(fa_left)
+draw_set_valign(fa_middle)
+if (bubblespr == spr_tv_bubble)
+{
+    promptx -= promptspd
+    if (bubblespr != spr_tv_bubbleclose && promptx < (350 - string_width(prompt)))
+    {
+        bubblespr = spr_tv_bubbleclose
+        bubbleindex = 0
+    }
+    draw_text_color((promptx - 350), 50, prompt, c_black, c_black, c_black, c_black, 1)
+}
+draw_set_halign(fa_left)
+surface_reset_target()
+draw_surface(promptsurface, 350, 0)    
 draw_set_alpha(1)

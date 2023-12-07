@@ -23,6 +23,13 @@ option_menu =
 "INPUT",
 "AUDIO",
 ]
+video =
+[
+["RESOLUTION", "option_resolution"] // i think thats the global name???
+]
+video_selec =
+[
+]
 cursor_index = 0
 cursor_sprite_number = sprite_get_number(spr_cursor)
 cursor_sprite_height = sprite_get_height(spr_cursor)
@@ -48,6 +55,7 @@ for (i = 0; i < array_length(toppin_sprite); i++)
 state = states.pause
 pausesurf = -4
 optionsurf = -4
+videosurf = -4
 screenx = 0
 screenx2 = screenx
 optionselected = 0
