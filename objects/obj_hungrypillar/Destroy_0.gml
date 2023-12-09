@@ -1,5 +1,6 @@
 if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == 0)
 {
+	instance_create(0, 0, obj_bossdefeatflash)
     scr_soundeffect(sfx_escaperumble)
     obj_camera.alarm[1] = 60
     instance_create(x, y, obj_bangeffect)

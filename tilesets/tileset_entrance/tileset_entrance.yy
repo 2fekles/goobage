@@ -15,7 +15,10 @@
     "name": "Tile Sets",
     "path": "folders/Tile Sets.yy",
   },
-  "spriteId": null,
+  "spriteId": {
+    "name": "tile_entrance1",
+    "path": "sprites/tile_entrance1/tile_entrance1.yy",
+  },
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
@@ -430,9 +433,9 @@
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
   "tileHeight": 32,
-  "tilehsep": 4,
-  "tilevsep": 4,
+  "tilehsep": 0,
+  "tilevsep": 0,
   "tileWidth": 32,
-  "tilexoff": 2,
-  "tileyoff": 2,
+  "tilexoff": 0,
+  "tileyoff": 0,
 }
